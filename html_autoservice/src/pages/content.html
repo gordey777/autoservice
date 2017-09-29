@@ -1,0 +1,204 @@
+@@include('src/modules/head/head.html', {"title": "content"}) 
+		<div class="wrapper">
+			@@include('src/modules/header/header.html')
+			<main class="content">
+				<div class="container">
+					@@include('src/modules/breadcrumbs/breadcrumbs.html', {
+						"arr": [
+							{
+								"link": "Главная"
+							},
+							{
+								"link": "Раздел"
+							}
+						],
+						"lastItem": "Контентная страница"
+					})
+					<div class="static-content">
+						<section class="section">
+							<h1 class="section__title">Контентная страница</h1>
+								<div class="holder">
+									<div class="holder__wrap">
+										<img src="pic/photo-01.png" alt="Picture" class="alignleft">
+										<p>Каждый автовладелец знает, что для безотказной работы транспортного средства необходимо позаботиться о своевременной профилактике всех технических узлов. Особенно это касается тех <a href="#">автолюбителей</a>, которым часто приходится ездить в Киев и другие большие города. Ведь поломка на дороге мегаполиса может доставить массу проблем. Долговечность работы двигателя, систем и других агрегатов автомобиля зависит от состояния фильтров, качества смазочных материалов и технических жидкостей. В среднем проходить ТО рекомендуется через каждые 10 тыс. км пробега, так как в нашей стране условия эксплуатации автомобиля считаются достаточно тяжелыми. Многие водители, которые не придерживаются этого правила, сталкиваются с ситуацией, когда автомобилю срочно необходим ремонт. Вряд ли в спешке вы сможете найти хороший автосервис.</p>
+										<p>Наш автосервис производит ремонт ходовой, ремонт/капремонт двигателя, шиномонтаж, ремонт бамперов. Особое внимание стоит уделить проводке автомобиля, ведь именно она достаточно часто становится причиной пожара. При необходимости вашего "железного коня" осмотрит наш высококвалифицированный автоэлектрик.</p>
+								</div>
+							</div>
+						</section>
+						<section>
+							<h1>Н1 — ЗАГОЛОВОК — Заголовок</h1>
+							<h2>Н2 — ЗАГОЛОВОК — Заголовок</h2>
+							<h3>Н3— ЗАГОЛОВОК — Заголовок</h3>
+							<h4>Н4— ЗАГОЛОВОК — Заголовок</h4>
+							<h5>Н5— ЗАГОЛОВОК — Заголовок</h5>
+							<h6>Н6— ЗАГОЛОВОК — Заголовок</h6>
+							<hr>
+							<div class="holder">
+								<div class="holder__cell">
+									<h4>Наши услуги:</h4>
+									<ol>
+										<li>Ремонт подвески</li>
+										<li>Ремонт тормозной системы</li>
+										<li>Ремонт двигателя </li>
+										<li>Выхлопная система </li>
+										<li>Ремонт коробок передач (МКПП, АКПП) </li>
+										<li>Кондиционер </li>
+										<li>Автоэлектрика</li>
+									</ol>
+								</div>
+								<div class="holder__cell">
+									<h4>Наши услуги:</h4>
+									<ul>
+										<li>Ремонт подвески</li>
+										<li>Ремонт тормозной системы</li>
+										<li>Ремонт двигателя </li>
+										<li>Выхлопная система </li>
+										<li>Ремонт коробок передач (МКПП, АКПП) </li>
+										<li>Кондиционер </li>
+										<li>Автоэлектрика</li>
+									</ul>
+								</div>
+							</div>
+							<div class="holder">
+								<h4>Галерея</h4>
+								<div class="gallery">
+									 @@include('src/modules/gallery/gallery-list.html', {
+										"arr": [
+											{
+												"image": "pic/gallery/photo-01.png"
+											},
+											{
+												"image": "pic/gallery/photo-02.png"
+											},
+											{
+												"image": "pic/gallery/photo-03.png"
+											},
+											{
+												"image": "pic/gallery/photo-01.png"
+											},
+											{
+												"image": "pic/gallery/photo-02.png"
+											},
+											{
+												"image": "pic/gallery/photo-03.png"
+											}
+										]
+									})
+									
+								</div>
+							</div>
+							<hr>
+							<div class="holder">
+								<div class="holder__cell">
+									<div class="input-hold input-row">
+										<input type="text" class="input input-hold__input" placeholder="Ваше имя">
+										<span class="input-hold__image">
+											<svg class="icon-user input-hold__icon">
+												<use xlink:href="#user"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="input-hold input-row">
+										<textarea name="text" id="text" placeholder="Ваше сообщение"></textarea>
+										<span class="input-hold__image">
+											<svg class="icon-message input-hold__icon">
+												<use xlink:href="#message"></use>
+											</svg>
+										</span>
+									</div>
+									<div class="input-row select">
+										<select class="js-select">
+											<option ></option>
+											<option value="Ремонт подвеск">Ремонт подвеск</option>
+											<option value="Ремонт тормозной системы">Ремонт тормозной системы</option>
+											<option value="Ремонт двигателя">Ремонт двигателя</option>
+											<option value="Выхлопная система">Выхлопная система</option>
+											<option value="Ремонт механическихкоробок передач (МКПП, АКПП) ">Ремонт механическихкоробок передач (МКПП, АКПП)</option>
+											<option value="Кондиционер">Кондиционер</option>
+											<option value="Автоэлектрика">Автоэлектрика</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="holder">
+						<div class="holder__cell">
+							<ul class="radioboxes-list">
+								<li class="radioboxes-list__item">
+									<label class="radiobox">
+										<input type="radio" 
+										class="radiobox__check" name="action_likefollow_unfollow_type">
+										<span class="radiobox__icon">
+											<span class="radiobox__icon-image"></span>
+										</span>
+										<span class="radiobox__inner">
+											<span class="checkbox__text">Самовывоз</span>
+										</span>
+									</label>
+								</li>
+								<li class="radioboxes-list__item">
+									<label class="radiobox">
+										<input type="radio" 
+										class="radiobox__check" name="action_likefollow_unfollow_type" checked="">
+										<span class="radiobox__icon">
+											<span class="radiobox__icon-image"></span>
+										</span>
+										<span class="radiobox__inner">
+											<span class="checkbox__text">Почтовая доставка "Почта России"</span>
+										</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="holder__cell">
+							<ul class="checkboxes-list">
+								<li class="checkboxes-list__item">
+									<label class="checkbox">
+										<input type="checkbox" class="checkbox__check">
+										<span class="checkbox__icon"></span>
+										<span class="checkbox__inner">
+											<span class="checkbox__text">Получать уведомления о доставке</span>
+										</span>
+									</label>
+								</li>
+								<li class="checkboxes-list__item">
+									<label class="checkbox">
+										<input type="checkbox" class="checkbox__check" checked="">
+										<span class="checkbox__icon"></span>
+										<span class="checkbox__inner">
+											<span class="checkbox__text">Получать уведомления о акциях и скидках</span>
+										</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="holder__cell">
+							<h4>Выпадающий список:</h4>
+							<div class="select">
+								<select class="js-select">
+									<option ></option>
+									<option value="Ремонт подвеск">Ремонт подвеск</option>
+									<option value="Ремонт тормозной системы">Ремонт тормозной системы</option>
+									<option value="Ремонт двигателя">Ремонт двигателя</option>
+									<option value="Выхлопная система">Выхлопная система</option>
+									<option value="Ремонт механическихкоробок передач (МКПП, АКПП) ">Ремонт механическихкоробок передач (МКПП, АКПП)</option>
+									<option value="Кондиционер">Кондиционер</option>
+									<option value="Автоэлектрика">Автоэлектрика</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="holder">
+						@@include('src/modules/pagination/pagination.html')
+					</div>
+					<hr>
+					<div class="holder">
+						<a href="#" class="btn" data-src="#popup-appointment" data-fancybox>Записаться он-лайн</a>
+					</div>
+				</div>
+			</main>
+		</div>
+	@@include('src/modules/footer/footer.html')
+@@include('src/modules/foot/foot.html')
+

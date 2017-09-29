@@ -1,0 +1,74 @@
+.nav-block {
+	font-size: 0;
+	line-height: 0;
+	margin: 0 -2px -3px;
+	padding-bottom: 32px;
+	text-align: center;
+	&__item {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 2px 3px;
+		&--mod {
+			width: 14.28%;
+			@include b(mobile) {
+			  width: auto;
+			}
+			.nav-block__link {
+				@extend %centering;
+				font-size: 0;
+				line-height: 0;
+				letter-spacing: -5px;
+				display: block;
+				padding: 15px 5px 12px;
+				background-color: $white;
+				border-width: 2px;
+				@include b(mobile) {
+				  padding: 10px 5px 9px;
+				}
+				&:hover {
+					background-color: $yellow;
+					border-color: $yellow;
+					color: $main;
+				}
+			}
+		}
+	}
+	&__link {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 12px;
+		font-weight: 700;
+		color: $main;
+		padding: 6px 8px;
+		background-color: $gray5;
+		border: 1px solid $gray;
+		@include b(mobile) {
+		  font-size: 10px;
+		  padding: 5px 7px;
+		}
+		&:hover {
+			color: $red;
+		}
+		&--active {
+			background-color: $red;
+			border-color: $red;
+			color: $white;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+	&__inner {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 11px;
+		letter-spacing: normal;
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 1.2;
+		@include b(tablet) {
+		  font-size: 10px;
+		}
+	}
+}

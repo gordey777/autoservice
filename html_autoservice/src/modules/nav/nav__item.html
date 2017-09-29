@@ -1,0 +1,54 @@
+<li class="nav__item">
+	<div class="nav__holder js-acc-item">
+		@@if(context.drop == "true") { 
+		<span class="nav__text arrow arrow--mod js-acc-trigger">@@itemDrop</span>
+		<ul class="nav__drop js-equal-height js-acc-content js-acc-sub">
+		@@for(var i = 0; i < arr.length; i++) {
+			<li class="nav__drop-item js-acc-sub-item">
+				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">`+arr[i].dropItem+`</a>
+				@@include('src/modules/nav/nav__sub.html', {
+					"arr": [
+						{
+							"subItem": "Ремонт и заправка кондиционера "
+						},
+						{
+							"subItem": "Ремонт автоэлектрики"
+						},
+						{
+							"subItem": "Дополнительное оборудование"
+						},
+						{
+							"subItem": "Развал схождение"
+						},
+						{
+							"subItem": "Ремонт карданного вала"
+						},
+						{
+							"subItem": "Замена жидкостей"
+						},
+						{
+							"subItem": "Ремонт подвески"
+						},
+						{
+							"subItem": "Ремонт тормозной системы"
+						},
+						{
+							"subItem": "Ремонт двигателя"
+						},
+						{
+							"subItem": "Ремонт выхлопной системы"
+						},
+						{
+							"subItem": "Ремонт коробки передач"
+						}
+					]
+				})
+			</li>
+		}
+		</ul>
+		}
+		@@if(context.link == "true") {
+		<a href="#" class="nav__text">@@itemLink</a>
+		}
+	</div>
+</li>

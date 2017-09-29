@@ -1,0 +1,93 @@
+@@include('src/modules/head/head.html', {"title": "index"}) 
+		<div class="wrapper">
+			@@include('src/modules/header/header.html')
+			<main class="index-pg">
+				@@include('src/modules/intro/intro.html')
+				<div class="service-hold">
+					<div class="container">
+						<div class="container__title container__title--mod red">Наши услуги</div>
+						<div class="container__title container__title--sm black">В вашем распоряжении</div>
+						@@include('src/modules/service/service.html')
+					</div>
+				</div>
+				<div class="about bg-gray">
+					<div class="container">
+						<div class="about__holder">
+							<div class="about__cell">
+								<div class="about__inner about__inner--mod js-equal-height">
+									<div class="about__title about__title--mod">Как к нам добраться</div>
+									<div class="video">
+										<a href="#" class="video__link" style="background-image: url('pic/bg/bg-video.png');" data-src="#popup-video" data-fancybox>
+											<div class="video__arrow">
+												<svg class="icon-video-arrow video__arrow-icon">
+													<use xlink:href="#video-arrow"></use>
+												</svg>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="about__cell">
+								<div class="about__inner js-equal-height">
+									<div class="about__title">Ремонт автомобилей</div>
+									<div class="about__subtitle">Ведущих мировых производителей</div>
+										@@include('src/modules/gallery/brand-slider-mod.html', {
+											"arr": [
+												{
+													"image": "pic/brand-slider/photo-01.png",
+													"image2": "pic/brand-slider/photo-04.png"
+												},
+												{
+													"image": "pic/brand-slider/photo-02.png",
+													"image2": "pic/brand-slider/photo-05.png"
+												},
+												{
+													"image": "pic/brand-slider/photo-03.png",
+													"image2": "pic/brand-slider/photo-06.png"
+												},
+												{
+													"image": "pic/brand-slider/photo-01.png",
+													"image2": "pic/brand-slider/photo-04.png"
+												},
+												{
+													"image": "pic/brand-slider/photo-02.png",
+													"image2": "pic/brand-slider/photo-05.png"
+												},
+												{
+													"image": "pic/brand-slider/photo-03.png",
+													"image2": "pic/brand-slider/photo-06.png"
+												}
+											]
+										})
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				@@include('src/modules/vantages/vantages.html')
+				<div class="slideshow-hold">
+					<div class="container">
+						<div class="container__title container__title--mod">Фотогалерея</div>
+						<div class="container__title container__title--sm">нашего автосервиса</div>
+						@@include('src/modules/gallery/slideshow.html')
+					</div>
+				</div>
+				<div class="content-block bg-gray-dotted">
+					<div class="container">
+						<div class="container__title container__title--mod red">Автоцентр киевский</div>
+						<div class="container__title container__title--sm black">Мы работаем для вас</div>
+						<div class="holder">
+							<div class="holder__wrap">
+								<img src="pic/photo-01.png" alt="Picture" class="alignleft">
+								<p>Каждый автовладелец знает, что для безотказной работы транспортного средства необходимо позаботиться о своевременной профилактике всех технических узлов. Особенно это касается тех <a href="#">автолюбителей</a>, которым часто приходится ездить в Киев и другие большие города. Ведь поломка на дороге мегаполиса может доставить массу проблем. Долговечность работы двигателя, систем и других агрегатов автомобиля зависит от состояния фильтров, качества смазочных материалов и технических жидкостей. В среднем проходить ТО рекомендуется через каждые 10 тыс. км пробега, так как в нашей стране условия эксплуатации автомобиля считаются достаточно тяжелыми. Многие водители, которые не придерживаются этого правила, сталкиваются с ситуацией, когда автомобилю срочно необходим ремонт. Вряд ли в спешке вы сможете найти хороший автосервис.</p>
+								<p>Наш автосервис производит ремонт ходовой, ремонт/капремонт двигателя, шиномонтаж, ремонт бамперов. Особое внимание стоит уделить проводке автомобиля, ведь именно она достаточно часто становится причиной пожара. При необходимости вашего "железного коня" осмотрит наш высококвалифицированный автоэлектрик.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			@@include('src/modules/map/map.html')
+		</div>
+	@@include('src/modules/footer/footer.html')
+@@include('src/modules/foot/foot.html')
+

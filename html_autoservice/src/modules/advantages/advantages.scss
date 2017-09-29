@@ -1,0 +1,85 @@
+.advantages {
+	@extend %rlist;
+	background-color: $black2;
+	position: relative;
+	z-index: 2;
+	@include b(tablet) {
+	  padding: 10px 0;
+	}
+	&__item {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: top;
+		width: 25%;
+		padding: 10px 50px 30px;
+		text-align: center;
+		position: relative;
+		@include b(tablet) {
+		  width: 50%;
+		}
+		@include b(mobileMin) {
+		  width: 100%;
+		}
+		&:after {
+			content: "";
+			height: 165px;
+			width: 1px;
+			background-color: rgba($white, .1);
+
+			position: absolute;
+			top: calc(50% - 82px);
+			right: 0;
+		}
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	&__top {
+		@extend %centering;
+		height: 65px;
+		font-size: 0;
+		line-height: 0;
+		letter-spacing: -5px;
+		position: relative;
+		margin-bottom: 16px;
+		&:before {
+			content: "";
+			height: 3px;
+			width: 70px;
+			background-color: $red;
+
+			position: absolute;	
+			top: 100%;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+		&-inner {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		&-icon {
+			vertical-align: middle;
+			fill: $yellow;
+		}
+		&-text {
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 1;
+			letter-spacing: normal;
+			color: $yellow;
+		}
+	}
+	&__title {
+		padding-bottom: 10px;
+		color: $white;
+		font-weight: 500;
+		font-size: 17px;
+	}
+	&__info {
+		font-size: 14px;
+		color: $white;
+	}
+}

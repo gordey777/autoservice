@@ -1,0 +1,89 @@
+	
+textarea,
+select,
+input,
+.input {
+	background-color: #fff;
+	border: 1px solid $gray2;
+	color: $main;
+	font-size: 12px;
+	line-height: $mainFontHeight;
+	padding: 12px 14px 11px;
+	width: 100%; 
+	display: block;
+	// transition: all .3s ease-in-out;
+	-webkit-appearance: none;
+	border-radius:0;
+	text-transform: uppercase;
+	@include placeholderColor($gray3);
+	&:focus {
+		border-width: 2px;
+		padding: 11px 13px 10px;
+		background-color: #fff;
+	}
+	&.error {
+	}
+	&.disabled,
+	&[disabled="disabled"],
+	&[disabled] {
+		background-color: #f3f3f3;
+	}
+}
+
+textarea {
+	height: 88px;
+}
+
+input[type="file"] {
+	display: none;
+	& + label {
+		display: block;
+		background: #fff;
+		font-size: 14px;
+		line-height: 24px;
+		padding: 25px 15px;
+		color: #969696;
+		text-align: center;
+		border: 1px dashed #c4c4c4;
+		transition: .2s ease-in-out;
+		&:hover {
+			border-color: #696969;
+			background: #e9e9e9;
+		}
+	}
+}
+
+.input-hold {
+	@extend %centering;
+	font-size: 0;
+	letter-spacing: -5px;
+	line-height: 0;
+	position: relative;
+	.input,
+	textarea {
+		padding-left: 46px;
+	}
+	&__image {
+		position: absolute;
+		top: 11px;
+		left: 15px;
+	}
+	&:focus {
+		border: 2px solid $black;
+	}
+	&__icon {
+		vertical-align: middle;
+	}
+}
+
+.input-row {
+	margin-bottom: 10px;
+}
+
+
+
+
+ 
+
+
+

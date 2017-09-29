@@ -1,0 +1,121 @@
+<header class="header">
+	<div class="header__top js-header-fixed">
+		<div class="container">
+			<div class="header__content">
+				<div class="header__logo">
+					<a href="#" class="logo">
+						<svg class="icon-logo logo__icon">
+							<use xlink:href="#logo"></use>
+						</svg>
+						<span class="logo__text">Автоцентр Киевский</span>
+					</a>
+				</div>
+				<div class="header__cell header__cell--menu js-equal-height">
+					<ul class="nav nav--mod">
+						@@include('src/modules/nav/nav__item.html', {
+							"drop": "true",
+							"itemDrop": "Наши услуги ",
+							"arr": [
+								{
+									"dropItem": "Ремонт подвески"
+								},
+								{
+									"dropItem": "Ремонт тормозной системы"
+								},
+								{
+									"dropItem": "Ремонт двигателя"
+								},
+								{
+									"dropItem": "Ремонт выхлопной системы "
+								},
+								{
+									"dropItem": "Ремонт коробки передач"
+								},
+								{
+									"dropItem": "Ремонт и заправка кондиционера "
+								},
+								{
+									"dropItem": "Ремонт автоэлектрики"
+								},
+								{
+									"dropItem": "Дополнительное оборудование"
+								},
+								{
+									"dropItem": "Развал схождение"
+								},
+								{
+									"dropItem": "Ремонт карданного вала "
+								},
+								{
+									"dropItem": "Замена жидкостей"
+								}
+							]
+						})
+					</ul>
+				</div>
+				<div class="header__cell header__cell--contact js-equal-height">
+					<div class="contact-item">
+						<span class="contact-item__image">
+							<svg class="icon-loc">
+								<use xlink:href="#loc"></use>
+							</svg>
+						</span>
+						<span class="contact-item__content">г.&nbsp;Калининград, ул.&nbsp;Киевская&nbsp;237</span>
+					</div>
+				</div>
+				<div class="header__cell header__cell--time js-equal-height">
+					<div class="contact-item">
+						<span class="contact-item__image">
+							<svg class="icon-clock">
+								<use xlink:href="#clock"></use>
+							</svg>
+						</span>
+						<span class="contact-item__content">Часы работы:  09:00&nbsp;-&nbsp;21:00
+						<span class="contact-item__content--red">Без выходных</span></span>
+					</div>
+				</div>
+				<div class="header__cell header__cell--tel js-equal-height">
+					<div class="contact-item">
+						<span class="contact-item__image">
+							<svg class="icon-tel">
+								<use xlink:href="#tel"></use>
+							</svg>
+						</span>
+						<span class="contact-item__content">
+							<a href="tel:+ 74012999999" class="contact-item__link">+&nbsp;7&nbsp;(4012)&nbsp;999&nbsp;999</a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="header__button">
+				<a href="#" data-src="#popup-appointment" class="btn btn--image" data-fancybox>
+					<span class="btn__image">
+						<svg class="icon-pencil">
+							<use xlink:href="#pencil"></use>
+						</svg>
+					</span>
+					<span class="btn__text">Записаться на ремонт</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="header__bottom">
+		<div class="container">
+			<div class="header__content">
+				<div class="header__nav">
+					@@include('src/modules/nav/nav.html')
+				</div>
+			</div>
+			<div class="header__button">
+				<a href="#" class="btn btn--image btn--border" data-src="#popup-pick" data-fancybox>
+					<span class="btn__image">
+						<svg class="icon-car">
+							<use xlink:href="#car"></use>
+						</svg>
+					</span>
+					<span class="btn__text">Подобрать автозапчасть</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,100 @@
+.intro-gallery {
+	&.is-loading {
+		opacity: 0;
+	}
+	&__item {
+		height: 400px;
+		background-size: cover;
+		background-position: center center;
+		position: relative;
+		@include b(mobile) {
+		  height: auto;
+		}
+		&:after {
+			content: "";
+			height: 100%;
+			width: 100%;
+			background-color: rgba($black, .5);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	&__holder {
+		padding: 103px 109px 0;
+		position: relative;
+		z-index: 2;
+		color: $white;
+		@include b(desktop) {
+		  padding-top: 50px;
+		}
+		@include b(tablet) {
+		  padding: 50px 50px;
+		}
+		@include b(mobile) {
+		  padding: 20px;
+		}
+	}
+	&__title {
+		font-size: 45px;
+		font-weight: 900;
+		text-transform: uppercase;
+		padding-bottom:12px;
+		letter-spacing: 1px;
+		line-height: 1.35;
+		@include b(tablet) {
+		  font-size: 30px;
+		}
+		@include b(mobile) {
+		  font-size: 20px;
+		}
+	}
+	&__info {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+}
+
+.slick-dots {
+	position: absolute;
+	top: 35%;
+	left: 35px;
+	@include b(tablet) {
+	  left: 0;
+	}
+	li {
+		display: block;
+		height: 37px;
+		width: 37px;
+		&.slick-active {
+			button {
+				background-color: transparent;
+				// border: 1px solid rgba($white, .5);
+				&:after {
+					background-color: $yellow;
+				}
+			}
+		}
+	}
+	button {
+		@extend %centering;
+		font-size: 0;
+		line-height: 0;
+		letter-spacing: -5px;
+		height: 37px;
+		width: 37px;
+		border-radius: 50%;
+		
+		text-align: center;
+		padding: 0;
+		background-color: transparent;
+		opacity: 1;
+		&:after {
+			height: 5px;
+			width: 5px;
+			border-radius: 50%;
+			background-color: $white;
+		}
+	}
+}

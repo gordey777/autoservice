@@ -1,0 +1,28 @@
+.services-item {
+	&__holder {
+		padding-bottom: 56px;
+		@include b(mobile) {
+		  padding-bottom: 20px;
+		}
+	}
+	.contact-block {
+		margin-bottom: 59px;
+		@include b(mobile) {
+		  margin-bottom: 20px;
+		}
+	}
+	.price-table-list__column {
+		width: 802px;
+		max-width: 100%;
+	}
+	.price-table-list__row {
+		margin-bottom: 0;
+	}
+	.price-table__row {
+		padding-left: 31px;
+		padding-right: 30px;
+		@include b(mobile) {
+		  padding: 7px 16px 8px 17px;
+		}
+	}
+}

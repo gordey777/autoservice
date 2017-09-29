@@ -1,0 +1,9 @@
+<div class="gallery js-slider is-loading">
+	@@for(var i = 0; i < arr.length; i++) {
+		<div class="gallery__item">
+			<a href="`+arr[i].image+`" class="gallery__link"  data-fancybox="1" >
+				<img src="`+arr[i].image+`" alt="Picture" class="gallery__image">
+			</a>
+		</div>
+	}
+</div>

@@ -1,0 +1,15 @@
+<div class="price-table" id="@@id">
+	@@if(context.head) { 
+		<div class="price-table__head">@@head</div>
+	}
+	@@for(var i = 0; i < arr.length; i++) {
+	<div class="price-table__row">
+		<div class="price-table__cell price-table__cell--left">
+			<span class="price-table__inner">`+arr[i].descr+`</span>
+		</div>
+		<div class="price-table__cell price-table__cell--right">
+			<span class="price-table__inner">от <span class="price-table__price">`+arr[i].price+`</span></span>
+		</div>
+	</div>
+	}
+</div>

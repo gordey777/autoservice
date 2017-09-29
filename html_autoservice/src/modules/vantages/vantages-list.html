@@ -1,0 +1,25 @@
+<ul class="vantages-list">
+	<li class="vantages-list__item">
+		<span class="vantages-list__image js-equal-height">
+			<svg class="icon-vantage-01 vantages-list__icon">
+				<use xlink:href="#vantage-01"></use>
+			</svg>
+			<span class="vantages-list__numb">13</span>
+		</span>
+		<span class="vantages-list__content js-equal-height">
+			<span class="vantages-list__inner"><span class='vantages-list__bold'>Более 13 лет</span>, наш автосервис оказывает услуги по ремонту и техническому обслуживанию автомобилей</span>
+		</span>
+	</li>
+	@@for(var i = 0; i < arr.length; i++) {
+	<li class="vantages-list__item">
+		<span class="vantages-list__image js-equal-height">
+			<svg class="icon-`+arr[i].icon+` vantages-list__icon">
+				<use xlink:href="#`+arr[i].icon+`"></use>
+			</svg>
+		</span>
+		<span class="vantages-list__content js-equal-height">
+			<span class="vantages-list__inner">`+arr[i].content+`</span>
+		</span>
+	</li>
+	}
+</ul>

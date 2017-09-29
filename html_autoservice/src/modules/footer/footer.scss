@@ -1,0 +1,278 @@
+.footer {
+	&__wrapper {
+		padding-top: 34px;
+		background-size: cover;
+		background-position: center center;
+		background-color: $main;
+	}
+	&__center {
+		padding-bottom: 30px;
+		@include b(mobile) {
+		  padding-bottom: 20px;
+		}
+	}
+	.container {
+		@extend %rlist;
+	}
+	&__cell {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		&--left {
+			width: 48%;
+			@include b(tablet) {
+			  padding-bottom: 10px;
+			}
+		}
+		&--right {
+			width: 52%;
+			padding-top: 5px;
+			@include b(tablet) {
+			  padding-top: 0;
+			}
+		}
+		@include b(tablet) {
+		  width: 100%;
+		}
+	}
+	&__box {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: top;
+		width: 48%;
+		padding-right: 40px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+		&--left {
+			width: 56%;
+		}
+		&--right {
+			width: 44%;
+		}
+		.footer__title {
+			@include b(mobile) {
+			  padding-bottom: 0;
+			}
+			&:after {
+				display: none;
+				border-color: $red;
+				border-width: 4px;
+				height: 10px;
+				width: 10px;
+				top: 5px;
+				@include b(mobile) {
+				  display: inline-block;
+				}
+			}
+		}
+		@include b(mobile) {
+		  width: 100%;
+		  padding-right: 0;
+		  padding-bottom: 10px;
+		  &:last-child {
+				padding-right: 0;
+			}
+		  &.is-open {
+		  	.footer__list {
+		  		display: block;
+		  	}
+		  	.footer__title:after {
+		  		transform: rotate(-45deg);
+		  		top: 10px;
+		  	}
+		  }
+		}
+	}
+	&__title {
+		color: $red;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+		font-size: 21px;
+		font-weight: 900;
+	}
+	&__bottom {
+		padding: 16px 0;
+		background-color: rgba($white, .1);
+	}
+	&__copy {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% - 150px);
+		font-size: 11px;
+		font-weight: 300;
+		color: rgba($white, .15);
+		padding-right: 15px;
+		@include b(mobile) {
+		 	width: 100%;
+		  padding-bottom: 10px;
+		  padding-right: 0;
+		}
+	}
+	&__site {
+		@extend %ulist;
+		width: 150px;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: right;
+		@include b(mobile) {
+		  width: 100%;
+		  text-align: left;
+		}
+		&-link {
+			font-size: 14px;
+			text-transform: uppercase;
+			text-decoration: underline;
+			color: rgba($white, .2);
+			font-weight: 900;
+			letter-spacing: 1px;
+		}
+	}
+	&__logo {
+		padding-bottom: 10px;
+		@include b(mobile) {
+		  text-align: center;
+		  padding-bottom: 20px;
+		}
+		.logo {
+			display: block;
+			@include b(mobile) {
+			  display: inline-block;
+			}
+		}
+	}
+	&__button {
+		@include b(mobile) {
+			text-align: center;
+		}
+		.btn {
+			width: 100%;
+			@include b(mobile) {
+			  width: auto;
+			  min-width: 240px;
+			}
+		}
+	}
+	&__list {
+		@include b(mobile) {
+		  display: none;
+		  padding-top: 10px;
+		}
+	}
+}
+
+
+.simple-list {
+	&--mod {
+		text-align: left;
+		color: $white;
+
+		.simple-list__item {
+			padding-bottom: 0;
+    	padding-left: 17px;
+				&:before {
+				height: 8px;
+   			width: 11px;
+				border-color: $red;
+				border-width: 3px;
+				transform: rotate(-40deg);
+			}
+		}
+	}
+	&__item {
+		padding-bottom: 2px;
+		padding-left: 9px;
+		position: relative;
+		font-size: 14px;
+		font-weight: 300;
+		&:before {
+			content: " ";
+			font-size: 9px;
+			font-weight: 700;
+			height: 6px;
+			width: 6px;
+			background-color: transparent;
+			border-bottom: 2px solid $yellow;
+			border-left: 2px solid $yellow;
+			transform: rotate(-135deg);
+
+			position: absolute;
+			top: 3px;
+			left: -3px;
+		}
+	}
+	&__link {
+		display: inline-block;
+		vertical-align: top;
+		color: $white;
+		font-size: 12px;
+		&--mod {
+			text-transform: uppercase;
+			color: $yellow;
+		}
+		&:hover {
+			color: $yellow;
+		}
+	}
+}
+
+.loc-list {
+	&__item {
+		@extend %rlist;
+		margin-bottom: 10px;
+		background-color: $main;
+		border: 1px solid rgba($white, .2);
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+	&__image {
+		@extend %centering;
+		font-size: 0;
+		line-height: 0;
+		letter-spacing: -5px;
+		height: 60px;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		width: 54px;
+		border-right: 1px solid rgba($white, .2);
+		@include b(mobile) {
+		  height: 40px;
+		}
+	}
+	&__icon {
+		fill: $yellow;
+		vertical-align: middle;
+	}
+	&__content {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% - 54px);
+		padding-left: 19px;
+		padding-right: 5px;
+		&-inner {
+			color: $white;
+			font-size: 14px;
+			font-weight: 500;
+			&--link {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 17px;
+				&:hover {
+					color: $yellow;
+				}
+			}
+			&--mod {
+				color: $red;
+				font-size: 11px;
+				display: block;
+				text-transform: uppercase;
+			}
+		}
+
+	}
+}

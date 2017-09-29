@@ -1,0 +1,72 @@
+.service-list {
+	@extend %rlist;
+	margin: 0 -5px -10px;
+	padding-bottom: 30px;
+	.service__item {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: top;
+		width: 25%;
+		padding: 0 5px 10px;
+		@include b(tablet) {
+		  width: 33.33%;
+		}
+		@include b(mobile) {
+		  width: 50%;
+		}
+		@include b(mobileMin) {
+		  width: 100%;
+		}
+	}
+}
+
+.service {
+	&__link {
+		display: block;
+		box-shadow: 3px 0 8px rgba(#e7e7e7, .04);
+		overflow: hidden;
+		&:hover {
+			.service__image {
+				transform: scale(1.05, 1.05);
+				transition: transform .3s ease-in-out;
+			}
+			.service__title {
+				color: $red;
+				transition: color .3s ease-in-out;
+			}
+		}
+	}
+	&__image {
+		background-position: center center;
+		background-size: cover;
+		height: 138px;
+		transition: transform .3s ease-in-out;
+	}
+	&__title {
+		@extend %centering;
+		font-size: 0;
+		line-height: 0;
+		letter-spacing: -5px;
+		min-height: 70px;
+		text-align: center;
+		background-color: $white;
+		border: 1px solid $gray;
+		padding: 5px 5px;
+		color: $main;
+		transition: color .3s ease-in-out;
+		@include b(mobile) {
+		  height: auto;
+		  min-height: auto;
+		  padding: 15px 5px;
+		}
+		&-inner {
+			display: inline-block;
+			vertical-align: middle;
+			text-transform: uppercase;
+			font-size: 15px;
+			line-height: 1.3;
+			letter-spacing: normal;
+			font-weight: 700;
+		}
+	}
+}

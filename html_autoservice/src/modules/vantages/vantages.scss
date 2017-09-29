@@ -1,0 +1,129 @@
+.vantages {
+	padding: 47px 0 61px;
+	&__holder {
+		@extend %rlist;
+		padding-top: 13px;
+	}
+	&__cell {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: top;
+		&--left {
+			width: calc(100% - 440px);
+			padding-right: 30px;
+			@include b(tablet) {
+			  padding: 0 0 20px;
+			}
+		}
+		&--right {
+			width: 440px;
+			text-align: center;
+			padding: 25px 30px 29px;
+			background-color: $white;
+			@include b(mobile) {
+			  padding: 20px 10px;
+			}
+		}
+		@include b(tablet) {
+		  width: 100%;
+		}
+	}
+	&__title {
+		font-size: 21px;
+		font-weight: 900;
+		padding-bottom: 7px;
+		text-transform: uppercase;
+	}
+	&__info {
+		font-size: 14px;
+		color: $red;
+		padding-bottom: 27px;
+		&--mod {
+			padding-bottom: 17px;
+		}
+	}
+	&__image {
+		padding-bottom: 18px;
+		&-picture {
+			max-width: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	&__position {
+		font-size: 18px;
+		padding-bottom: 8px;
+	}
+}
+
+.vantages-list {
+	margin-bottom: -10px;
+	&__item {
+		@extend %rlist;
+		padding-bottom: 10px;
+	}
+	&__image {
+		@extend %centering;
+		display: inline-block;
+		vertical-align: top;
+		width: 80px;
+		font-size: 0;
+		line-height: 0;
+		letter-spacing: -5px;
+		text-align: center;
+		background-color: $yellow;
+		position: relative;
+		min-height: 80px;
+		@include b(mobile) {
+		  width: 50px;
+		  padding: 4px;
+		}
+	}
+	&__numb {
+		font-size: 14px;
+		font-weight: 900;
+		line-height: 1;
+		letter-spacing: normal;
+		color: $main;
+
+		position: absolute;
+		top: 30px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		
+	}
+	&__icon {
+		vertical-align: middle;
+		max-width: 100%;
+		
+	}
+	&__content {
+		@extend %centering;
+		font-size: 0;
+		line-height: 0;
+		letter-spacing: -5px;
+		display: inline-block;
+		vertical-align: top;
+		width: calc(100% - 80px);
+		background-color: $white;
+		padding: 10px 25px 10px 30px;
+		min-height: 80px;
+		@include b(mobile) {
+		  padding: 10px;
+		  width: calc(100% - 50px);
+		}
+	}
+	&__inner {
+		@extend %ulist;
+		font-size: 16px;
+		display: inline-block;
+		vertical-align: middle;
+		@include b(mobile) {
+		  font-size: 12px;
+		}
+	}
+	&__bold {
+		font-weight: 700;
+	}
+}

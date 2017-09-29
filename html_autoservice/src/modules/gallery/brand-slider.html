@@ -1,0 +1,15 @@
+<div class="brand-slider-holder">
+	<div class="container">
+		<div class="brand-slider-title container__subtitle">Ремонт автомобилей</div>
+		<div class="brand-slider-subtitle">всех ведущих мировых производителей с 1997 года</div>
+		<div class="brand-slider js-brand-slider is-loading">
+			@@for(var i = 0; i < arr.length; i++) {
+				<div class="brand-slider__item">
+					<a href="#" class="brand-slider__link" >
+						<img src="`+arr[i].image+`" alt="Picture" class="brand-slider__image">
+					</a>
+				</div>
+			}
+		</div>
+	</div>
+</div>

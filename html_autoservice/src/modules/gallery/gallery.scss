@@ -1,0 +1,81 @@
+.gallery-holder {
+	padding-bottom: 30px;
+}
+.gallery-block:not(:last-child) {
+	padding-bottom: 55px;
+}
+.gallery {
+	&.is-loading {
+		opacity: 0;
+	}
+	margin-left: -1px;
+	@include b(1300) {
+	  margin: 0 30px;
+	}
+	@include b(tablet) {
+	  margin: 0 20px;
+	}
+	@include b(mobile) {
+	  margin: 0 15px;
+	}
+	&__item {
+		padding-right: 1px;
+	}
+	&__link {
+		display: block;
+		max-width: 100%;
+		max-height: 100%;
+		&:hover {
+			opacity: .8;
+		}
+	}
+	&__image {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.slick-arrow {
+	width: 10px;
+	height: 17px;
+	cursor: pointer;
+
+	position: absolute;
+	top: calc(50% - 9px);
+	[class*="icon-"] {
+		fill: $yellow;
+		transition: fill .3s ease-in-out;
+	}
+	&:hover {
+		[class*="icon-"] {
+			fill: $red;
+			transition: fill .3s ease-in-out;
+		}
+	}
+	&.slick-prev {
+		left: -30px;
+		transform: rotate(180deg);
+		@include b(tablet) {
+		  left: -20px;
+		}
+		@include b(mobile) {
+		  left: -20px;
+		}
+	}
+	&.slick-next {
+		right: -30px;
+		@include b(tablet) {
+		  right: -20px;
+		}
+		@include b(mobile) {
+		  right: -20px;
+		}
+	}
+}
+
+.fancybox-arrow,
+.fancybox-arrow:hover,
+.fancybox-arrow:focus {
+	background-color: transparent;
+}

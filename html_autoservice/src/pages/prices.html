@@ -1,0 +1,122 @@
+@@include('src/modules/head/head.html', {"title": "prices"}) 
+		<div class="wrapper">
+			@@include('src/modules/header/header.html')
+			<main class="content content--mod">
+				<div class="prices">
+					<div class="container">
+						@@include('src/modules/breadcrumbs/breadcrumbs.html', {
+							"arr": [
+								{
+									"link": "Главная"
+								}
+							],
+							"lastItem": "Диагностика"
+						})
+						<h1 class="container__title container__title--mod">ЦЕНЫ</h1>
+						<span class="container__title container__title--sm">на наши услуги</span>
+						@@include('src/modules/nav-block/nav-block.html', {
+							"arr": [
+								{
+									"link": "Ремонт подвески",
+									"active": "nav-block__link--active",
+									"href": "#link1"
+								},
+								{
+									"link": "Ремонт тормозной системы",
+									"active": "",
+									"href": "#link3"
+								},
+								{
+									"link": "Ремонт двигателя",
+									"active": "",
+									"href": "#link2"
+								},
+								{
+									"link": "Ремонт выхлопной системы",
+									"active": "",
+									"href": "#link4"
+								},
+								{
+									"link": "Ремонт коробки передач",
+									"active": "",
+									"href": " "
+								},
+								{
+									"link": "Диагностика и ремонт топливной системы",
+									"active": "",
+									"href": " "
+								},
+								{
+									"link": "Ремонт автоэлектрики",
+									"active": "",
+									"href": " "
+								},
+								{
+									"link": "Дополнительное оборудование",
+									"active": "",
+									"href": " "
+								},
+								{
+									"link": "Развал схождение",
+									"active": "",
+									"href": " "
+								},
+								{
+									"link": "Ремонт и заправка кондиционера",
+									"active": "",
+									"href": " "
+								},
+								{
+									"link": "Замена жидкостей",
+									"active": "",
+									"href": " "
+								},
+								{
+									"link": "Техническое обслуживание",
+									"active": "",
+									"href": " "
+								}
+							]
+						})
+						<p class="prices__info">Каждый автовладелец знает, что для безотказной работы транспортного средства необходимо позаботиться о своевременной профилактике всех технических узлов. Особенно это касается тех автолюбителей, которым часто приходится ездить в Киев и другие большие города. Ведь поломка на дороге мегаполиса может доставить массу проблем. Долговечность работы двигателя, систем и других агрегатов автомобиля зависит от состояния фильтров, качества смазочных материалов и технических жидкостей. В среднем проходить ТО рекомендуется через каждые 10 тыс. км пробега, так как в нашей стране условия эксплуатации автомобиля считаются достаточно тяжелыми. Многие водители, которые не придерживаются этого правила, сталкиваются с ситуацией, когда автомобилю срочно необходим ремонт. Вряд ли в спешке вы сможете найти хороший автосервис.</p>
+					</div>
+					@@include('src/modules/contact-block/contact-block.html')
+				</div>
+				<div class="container">
+					@@include('src/modules/price-table/price-table-list.html')
+					<p class="prices__info prices__info--mod">За более подробной информацией обращайтеся в нашу компанию. Мы прозведем оценку работ и подберем наиболее подходящие комплектующие.</p>
+				</div>
+			</main>
+			@@include('src/modules/map/map.html')
+			@@include('src/modules/gallery/brand-slider.html', {
+				"arr": [
+					{
+						"image": "pic/brand-slider/photo-01.png"
+					},
+					{
+						"image": "pic/brand-slider/photo-02.png"
+					},
+					{
+						"image": "pic/brand-slider/photo-03.png"
+					},
+					{
+						"image": "pic/brand-slider/photo-04.png"
+					},
+					{
+						"image": "pic/brand-slider/photo-05.png"
+					},
+					{
+						"image": "pic/brand-slider/photo-06.png"
+					},
+					{
+						"image": "pic/brand-slider/photo-01.png"
+					},
+					{
+						"image": "pic/brand-slider/photo-02.png"
+					}
+				]
+			})
+		</div>
+	@@include('src/modules/footer/footer.html')
+@@include('src/modules/foot/foot.html')
+

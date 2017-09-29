@@ -1,0 +1,297 @@
+.nav {
+	@extend %rlist;
+	margin: 0 -11px;
+	@include b(mobile) {
+		margin: 0;
+	}
+	&--mod {
+		margin: 0;
+		.nav__item {
+			display: block;
+			padding: 0;
+		}
+		.nav__holder {
+			padding:28px 20px;
+			width: 100%;
+		}
+	}
+	.flexMenu-viewMore,
+	&__item {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: middle;
+		@include b(mobile) {
+			display: block;
+			text-align: right;
+		}
+	}
+	&__holder {
+		position: relative;
+		padding: 13px 11px;
+		&:hover {
+			@include b(mobileMax) {
+				.nav__text {
+					color: $yellow;
+					cursor: pointer;
+				}
+				.nav__drop {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		&.is-open {
+			.nav__drop {
+				display: block !important;
+			}
+			.nav__text:after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	&__drop {
+		@include b(mobileMax) {
+		background-color: #1c1c1e;
+		width: 320px;
+		padding: 25px 0 19px;
+		text-align: left;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 2;
+
+		opacity: 0;
+		visibility: hidden;
+
+		transition: opacity .3s ease-in-out;
+		}
+		@include b(mobile) {
+		  display: none !important;
+		}
+		&-item {
+			padding: 5px 10px 6px 44px;
+			&:hover {
+				@include b(mobileMax) {
+					.nav__drop-link {
+						color: $yellow;
+					}
+					.nav__sub {
+						opacity: 1;
+						visibility: visible;
+
+						transition: opacity .3s ease-in-out;
+					}
+				}
+			}
+			@include b(mobile) {
+			  padding: 5px 20px 6px 10px;
+			  &.is-open {
+			  	.nav__sub {
+			  		display: block !important;
+			  	}
+			  	.nav__drop-link:after {
+						transform: rotate(-45deg);
+					}
+			  }
+			}
+		}
+		&-link {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 14px;
+			color: $white;
+			font-weight: 400;
+			letter-spacing: .2px;
+		}
+	}
+	.flexMenu-viewMore a,
+	&__text {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 12px;
+		font-weight: 700;
+		color: $white;
+		text-transform: uppercase;
+		letter-spacing: .8px;
+	}
+	&__sub {
+		@include b(mobileMax) {
+			padding: 25px 0 19px;
+			background-color: #373739;
+			width: 320px;
+
+			position: absolute;
+			top: 0;
+			left: 100%;
+
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity .3s ease-in-out;
+		}
+		@include b(mobile) {
+		  display: none !important;
+		  height: auto !important;
+		}
+		&:before {
+			content: "";
+			height: 19px;
+			width: 19px;
+			background-color: #1c1c1e;
+
+			position: absolute;
+			top: calc(50% - 10px);
+			left: -10px;
+			transform: rotate(45deg);
+		}
+		&-item {
+			padding: 5px 10px 6px 44px;
+			@include b(mobile) {
+			  padding: 5px 30px 6px 10px;
+			}
+			&:hover {
+				.nav__sub-link {
+					color: $yellow;
+				}
+			}
+		}
+		&-link {
+			display: inline-block;
+			vertical-align: top;
+			color: $white;
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+}
+
+.arrow {
+	position: relative;
+	display: inline-block;
+	&:after { 
+		content: "";
+		height: 6px;
+		width: 6px;
+		border-top: 2px solid $yellow;
+		border-right: 2px solid $yellow;
+		transform: rotate(45deg);
+
+		
+		position: absolute;
+		top: calc(50% - 3px);
+		left: -17px;
+		@include b(mobile) {
+		  left: auto;
+		  right: -17px;
+		  transform: rotate(135deg);
+		}
+	}
+	&--mod:after {
+		transform: rotate(135deg);
+
+		position: relative;
+		top: 0;
+		left: -1px;
+
+		display: inline-block;
+		vertical-align: middle;
+		
+		margin-top: -5px;
+	}
+}
+
+.nav-mob {
+	&.is-active {
+		.nav-mob__holder {
+			right: 0;
+			transition: right .3s ease-in-out;
+		}
+		.nav-mob__trigger {
+			&-inner {
+				background-color: transparent;
+				&:before {
+					transform: rotate(45deg);
+					top: 12px;
+					transition: transform .3s ease-in-out;
+				}
+				&:after {
+					transform: rotate(-45deg);
+					bottom: 12px;
+					transition: transform .3s ease-in-out;
+				}
+			}
+		}
+	}
+	&__trigger {
+		@extend %centering;
+		font-size: 0;
+		line-height: 0;
+		letter-spacing: -5px;
+		display: inline-block;
+		vertical-align: top;
+		height: 26px;
+		width: 36px;
+		padding: 10px 6px;
+		background-color: $black2;
+		position: relative;
+		text-align: center;
+		z-index: 999;
+
+		display: none;
+		@include b(mobile) {
+		  display: inline-block;
+		}
+		&-inner {
+			display: inline-block;
+			vertical-align: middle;
+			height: 2px;
+			width: 100%;
+			background-color: $yellow;
+			&:before,
+			&:after {
+				content: "";
+				height: 2px;
+				background-color: $yellow;
+				width: calc(100% - 12px);
+
+				position: absolute;
+				left: 6px;
+			}
+			&:before {
+				top: 6px;
+			}
+			&:after {
+				bottom: 6px;
+			}
+		}
+	}
+	&__holder {
+		@include b(mobile) {
+			background-color: rgba($main, .8);
+			padding: 70px 20px 30px;
+			height: 100vh;
+			width: 100%;
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			right: -100%;
+			z-index: 99;
+			transition: right .3s ease-in-out;
+		}
+	}
+	&__inner {
+		@include b(mobile) {
+			height: 100%;
+			width: 100%;
+			overflow-y: auto;
+		}
+	}
+}
+
+.flexMenu-popup {
+	background-color: $black2;
+	z-index: 999;
+	.nav__item {
+		display: block;
+	}
+}

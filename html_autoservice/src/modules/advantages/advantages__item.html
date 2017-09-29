@@ -1,0 +1,17 @@
+<li class="benefits-list__item">
+	<span class="benefits-list__top">
+		<span class="benefits-list__top-inner">
+			@@if(context.image) {
+				<svg class="icon-@@image benefits-list__icon">
+					<use xlink:href="#@@image"></use>
+				</svg>
+			}
+			@@if(context.text) {
+				<span class="benefits-list__text @@textSm">@@text</span>
+			}
+		</span>
+	</span>
+	<div class="benefits-list__content js-equal-height">
+		<div class="benefits-list__info">@@info</div>
+	</div>
+</li>

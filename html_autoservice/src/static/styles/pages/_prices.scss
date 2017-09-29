@@ -1,0 +1,18 @@
+.prices {
+	&__info {
+		padding-bottom: 33px;
+		&--mod {
+			padding-bottom: 0;
+		}
+	}
+	&__holder {
+		padding-top: 30px;
+	}
+	.contact-block {
+		margin-top: 20px;
+		margin-bottom: 30px;
+		@include b(mobile) {
+		  margin: 0;
+		}
+	}
+}

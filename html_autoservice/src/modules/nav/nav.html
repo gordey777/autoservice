@@ -1,0 +1,89 @@
+<div class="nav-mob js-nav">
+	<div class="nav-mob__trigger js-nav-trigger">
+		<span class="nav-mob__trigger-inner"></span>
+	</div>
+	<div class="nav-mob__holder js-nav-holder">
+		<div class="nav-mob__inner">
+			<ul class="nav js-flex js-acc">
+				@@include('src/modules/nav/nav__item.html', {
+					"drop": "true",
+					"itemDrop": "Услуги ",
+					"arr": [
+						{
+							"dropItem": "Ремонт подвески"
+						},
+						{
+							"dropItem": "Ремонт тормозной системы"
+						},
+						{
+							"dropItem": "Ремонт двигателя"
+						},
+						{
+							"dropItem": "Ремонт выхлопной системы "
+						},
+						{
+							"dropItem": "Ремонт коробки передач"
+						},
+						{
+							"dropItem": "Ремонт и заправка кондиционера "
+						},
+						{
+							"dropItem": "Ремонт автоэлектрики"
+						},
+						{
+							"dropItem": "Дополнительное оборудование"
+						},
+						{
+							"dropItem": "Развал схождение"
+						},
+						{
+							"dropItem": "Ремонт карданного вала "
+						},
+						{
+							"dropItem": "Замена жидкостей"
+						}
+					]
+				})
+				@@include('src/modules/nav/nav__item.html', {
+					"drop": "true",
+					"itemDrop": "Ремонт микроавтобусов ",
+					"arr": [
+						{
+							"dropItem": "Ремонт подвески"
+						},
+						{
+							"dropItem": "Ремонт тормозной системы"
+						},
+						{
+							"dropItem": "Ремонт двигателя"
+						}
+					]
+				})
+				@@include('src/modules/nav/nav__item.html', {
+					"link": "true",
+					"itemLink": " Автозапчасти"
+				})
+				@@include('src/modules/nav/nav__item.html', {
+					"link": "true",
+					"itemLink": " Акции"
+				})
+				@@include('src/modules/nav/nav__item.html', {
+					"link": "true",
+					"itemLink": " Об автосервисе"
+				})
+				@@include('src/modules/nav/nav__item.html', {
+					"link": "true",
+					"itemLink": " Цены"
+				})
+				@@include('src/modules/nav/nav__item.html', {
+					"link": "true",
+					"itemLink": " Новости"
+				})
+				@@include('src/modules/nav/nav__item.html', {
+					"link": "true",
+					"itemLink": " Контакты"
+				})
+			</ul>
+		</div>
+	</div>
+</div>

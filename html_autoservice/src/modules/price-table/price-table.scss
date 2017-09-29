@@ -1,0 +1,88 @@
+.price-table-list {
+	padding: 61px 0 25px;
+	text-align: center;
+	@include b(tablet) {
+	  padding-bottom: 20px;
+	}
+	&__row {
+		@extend %rlist;
+		margin: 0 -15px -30px;
+
+	}
+	&__column {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		padding: 0 15px 30px;
+		@include b(mobile) {
+		  width: 100%;
+		  padding-bottom: 0;
+		}
+	}
+	&__info {
+		text-align: left;
+		padding: 0 20px;
+		font-size: 14px;
+		color: $gray7;
+	}
+}
+
+.price-table {
+	border: 1px solid $gray;
+	border-top: none;
+	margin-bottom: 30px;
+	text-align: left;
+	&__head {
+		border-top: 1px solid $gray;
+		padding: 26px 22px;
+		color: $gray6;
+		font-size: 15px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__row {
+		@extend %rlist;
+		border-top: 1px solid $gray;
+		padding: 9px 18px 10px 20px;
+		@include b(mobile) {
+		  padding: 7px 16px 8px 17px;
+		}
+		&:nth-child(2n+1) {
+			background-color: $gray5;
+		}
+	} 
+	&__cell {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: middle;
+		&--left {
+			width: calc(100% - 100px);
+		}
+		&--right {
+			width: 100px;
+			padding-left: 2px;
+			text-align: right;
+		}
+	}
+	&__inner {
+		color: $main;
+		font-size: 15px;
+		font-weight: 300;
+		display: inline-block;
+		vertical-align: middle;
+		@include b(mobile) {
+		  font-size: 13px;
+		}
+	}
+	&__price {
+		color: $red;
+		font-weight: 500;
+	}
+}
+
+
+
+
+

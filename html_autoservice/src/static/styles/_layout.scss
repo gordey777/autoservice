@@ -1,0 +1,161 @@
+//----------------------------------------------------//
+// LAYOUT                                             //
+//----------------------------------------------------//
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	min-width: 320px;
+}
+
+html.is-locked,
+html.is-locked body {
+	overflow: hidden;
+	height: 100%;
+	@include b(mobile) {
+		overflow: visible;
+	}
+}
+@include b(mobile) {
+	html.is-locked body {
+		overflow: hidden;
+	}
+}
+.container {
+	@include clearfix;
+	padding: 0 10px;
+	width: 1190px;
+	margin: 0 auto;
+	max-width: 100%;
+	&__title {
+		font-size: 50px;
+		font-weight: 900;
+		padding-bottom: 10px;
+		letter-spacing: 2.4px;
+		text-align: center;
+		text-transform: uppercase;
+		padding-bottom: 25px;
+		display: block;
+		@include b(mobile) {
+		  font-size: 30px;
+		  padding-bottom: 20px;
+		}
+		&--mod {
+			padding-bottom:5px;
+		}
+		&--sm {
+			font-size: 24px;
+			font-weight: 300;
+			color: #ee1c1f;
+			padding-bottom: 20px;
+			letter-spacing: 1.1px;
+			padding-bottom: 26px;
+			@include b(mobile) {
+			  font-size: 28px;
+			}
+		}
+		&--xs {
+			@include b(mobile) {
+			  font-size: 26px;
+			}
+		}
+	}
+	&__subtitle {
+		color: $red;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+		font-size: 21px;
+		font-weight: 900;
+		letter-spacing: .8px;
+		@include b(mobile) {
+		  font-size: 18px;
+		}
+	}
+}
+
+.content {
+	padding: 11px 0 30px;
+	&--mod {
+		padding-bottom: 0;
+	}
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.section {
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		padding-bottom: 21px !important;
+	}
+}
+
+.holder {
+	@include clearfix;
+	padding-bottom: 20px;
+	&__wrap {
+		@include clearfix;
+		margin-bottom: -20px;
+		overflow: hidden;
+	}
+	&__cell {
+		float: left;
+		width: 33.33%;
+		padding-bottom: 20px;
+		padding-right: 20px;
+		@include b(mobile) {
+		  width: 100%;
+		}
+	}
+}
+
+.alignleft {
+	float: left;
+	padding-right: 30px;
+	padding-bottom: 20px;
+	@include b(650) {
+	  float: none;
+	  padding-right: 0;
+	}
+}
+
+.alignright {
+	float: right;
+	padding-left: 30px;
+	@include b(650) {
+	  float: none;
+	  padding-left: 0;
+	}
+}
+
+.white {
+	color: $white;
+}
+
+.red {
+	color: $red;
+}
+
+.black {
+	color: $main;
+}
+
+.bg-gray-dotted {
+	background-image: url('../pic/bg/bg-gray-dotted.png');
+	background-repeat: repeat;
+}
+.bg-red-dotted {
+	background-image: url('../pic/bg/bg-benefits.png');
+	background-repeat: repeat;
+}
+
+.bg-gray {
+	background-color: $gray8;
+}

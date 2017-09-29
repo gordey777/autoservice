@@ -1,0 +1,38 @@
+@@include('src/modules/head/head.html', {"title": "404"}) 
+		<div class="wrapper">
+			@@include('src/modules/header/header.html')
+			<main class="content content--mod">
+				<div class="container">
+					@@include('src/modules/breadcrumbs/breadcrumbs.html', {
+						"arr": [
+							{
+								"link": "Главная"
+							}
+						],
+						"lastItem": "Контакты"
+					})
+					<div class="not-found">
+						<h1 class="not-found__title">4<span class="not-found__title-inner">0</span>4</h1>
+						<div class="not-found__image">
+							<svg class="icon-not-found">
+								<use xlink:href="#not-found"></use>
+							</svg>
+						</div>
+						<div class="not-found__subtitle">страница не найдена</div>
+						<div class="not-found__button">
+							<a href="#" class="not-found__link">
+								<span class="not-found__link-image">
+									<svg class="icon-arrows">
+										<use xlink:href="#arrows"></use>
+									</svg>
+								</span>
+								<span class="not-found__link-text">Вернуться на главную</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	@@include('src/modules/footer/footer.html')
+@@include('src/modules/foot/foot.html')
+

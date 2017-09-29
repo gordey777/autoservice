@@ -1,0 +1,96 @@
+.popup {
+	display: none;
+	width: 530px;
+	padding: 35px 33px 20px;
+	background-color: $white;
+	max-width: 100%;
+	@include b(mobile) {
+	  padding: 35px 10px 20px;
+	}
+	&__title {
+		padding-bottom: 5px;
+		text-align: center;
+		color: $main;
+	}
+	&__info {
+		text-align: center;
+		color: $red;
+		padding-bottom: 26px;
+		font-size: 14px;
+		line-height: 1.6;
+	}
+	&__submit {
+		text-align: center;
+		padding-bottom: 23px;
+		.btn {
+			max-width: 280px;
+			width: 100%;
+		}
+	}
+	&__form {
+		max-width: 370px;
+		margin: 0 auto;
+	}
+}
+
+.fancybox-close-small {
+	height: 24px;
+	width: 24px;
+	background-color: transparent;
+
+	top: 0;
+	z-index: 99;
+	right: -34px;
+	@include b(mobile) {
+	  right: 10px;
+	  top: 10px;
+	}
+	&:hover,
+	&:focus {
+		background-color: transparent;
+		&:before,
+		&:after {
+			background-color: $red;
+			transition: background-color .3s ease-in-out;
+		}
+	}
+	&:before,
+	&:after {
+		border-radius: 0;
+		content: "";
+		height: 30px;
+		width: 2px;
+		background-color: $yellow;
+
+		position: absolute;
+		top: 0;
+		transition: background-color .3s ease-in-out;
+		@include b(mobile) {
+		  height: 15px;
+		}
+	}
+	&:before {
+		left: 11px;
+		transform: rotate(-45deg);
+	}
+	&:after {
+		right: 11px;
+		transform: rotate(45deg);
+	}
+}
+
+.fancybox-slide > * {
+	overflow: visible;
+}
+
+.fancybox-enabled {
+	overflow: visible;
+}
+
+.popup-video {
+	&__video {
+		width: 100%;
+		max-width: 100%;
+		height: 240px;
+	}
+}

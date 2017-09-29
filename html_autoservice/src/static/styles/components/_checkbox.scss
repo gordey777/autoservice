@@ -1,0 +1,136 @@
+// Checkbox
+	//----------------------------------------------------//
+	.checkbox {
+		position:relative;
+		display:inline-block;
+		vertical-align:middle;
+		min-width:21px;
+		min-height:21px;
+		text-align:left;
+		cursor: pointer;
+
+		&:hover{
+
+			.checkbox__icon{
+				border-color: $black;
+			}
+		}
+		
+		&__icon {
+			position:absolute;
+			left:0;
+			top:-3px;
+			width:20px;
+			height:20px;	
+			background-color: $white;	
+			border: 1px solid $gray4;
+			transition: all .2s ease-in-out;
+			border-radius: 3px;		
+
+			&:before {
+				content: '';
+				width: 9px;
+				height: 6px;
+				border-left: 3px solid $main;
+				border-bottom: 3px solid $main;
+				position: absolute;
+				transform: rotate(-45deg);
+				left: 5px;
+    		top: 5px;
+
+    		opacity: 0;
+			}
+		}
+		
+		&__inner {
+			padding: 0 0 0 44px;
+			display:block;
+		}
+		&__text {
+			display: inline-block;
+			vertical-align: top;	
+			font-size: 14px;		
+			font-weight: 300;
+			color: $main;
+
+			& + .checkbox__text {
+				margin-left: 3px;
+			}
+		}
+
+		&__check {
+			display: none;
+			&:checked {
+				&~.checkbox__icon {	
+					border-color: $main;			
+					&:before {
+						opacity: 1;
+					}					
+				}
+				&~.checkbox__inner {
+					.checkbox__text {
+						
+					}
+				}	
+				&:hover{
+					&~.checkbox__icon {	
+						border-color: grey;					
+					}
+				}			
+			}
+			
+			&:disabled {
+				&~.checkbox__icon {
+					border-color: $disabled;					
+				}
+			}
+		}		
+	}
+
+	.checkboxes-list {
+		@extend %rlist;
+
+		&__item {
+			@extend %ulist;
+
+			& + .checkboxes-list__item {
+				padding-top: 8px;
+			}
+			&--mod {
+				& + .checkboxes-list__item {
+					padding-top: 13px
+				}
+				.checkbox__inner {
+					padding: 0 0 0 34px;
+				}
+				.checkbox__text {
+					font-size: 12px;
+					font-weight: 300;
+					color: rgba($black, .7);
+				}
+				.checkbox__check:checked {
+					 ~ .checkbox__icon {
+						border-color: #929292;
+					}
+				}
+				.checkbox__icon:before {
+					border-color: rgba($black, .5);
+				}
+			}
+		}
+	}
+
+	.checkboxes-inline-list {
+		@extend %rlist;
+
+		margin: -18px 0 0 -28px;
+
+		&__item {
+			@extend %ulist;
+
+			display: inline-block;
+			vertical-align: top;
+			margin: 18px 0 0 28px;
+
+		}		
+	}

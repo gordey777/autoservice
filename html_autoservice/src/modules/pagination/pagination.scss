@@ -1,0 +1,58 @@
+.pagination {
+	@extend %rlist;
+	text-align: center;
+	&__item {
+		@extend %ulist;
+		padding-left: 2px;
+		display: inline-block;
+		vertical-align: top;
+		&:last-child {
+			padding-right: 0;
+		}
+		&--active {
+			.pagination__link {
+				color: $main;
+				background-color: $gray5;
+			}
+		}
+	}
+	&__link {
+		@extend %centering;
+		font-size: 0;
+		letter-spacing: -5px;
+		line-height: 0;
+		display: inline-block;
+		height: 48px;
+		width: 48px;
+		text-align: center;
+		border: 2px solid rgba($main, .2);
+		color: $red;
+		&:hover {
+			background-color: $red;
+			border-color: $red;
+			color: $white;
+			.pagination__inner--arrow {
+				border-color: $white;
+			}
+		}
+	}
+	&__inner {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 14px;
+		line-height: 1;
+		letter-spacing: normal;
+		font-weight: 700;
+		&--arrow {
+			height: 5px;
+			width: 5px;
+			background-color: transparent;
+			border-top: 1px solid $red;
+			border-right: 1px solid $red;
+			transform: rotate(-135deg);
+		}
+		&--next {
+			transform: rotate(45deg);
+		}
+	}
+}

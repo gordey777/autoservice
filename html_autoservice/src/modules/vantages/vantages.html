@@ -1,0 +1,42 @@
+<div class="vantages bg-red-dotted">
+	<div class="container">
+		<div class="container__title container__title--mod white">Почему выбирают</div>
+		<div class="container__title container__title--sm white">наш автосервис?</div>
+		<div class="vantages__holder">
+			<div class="vantages__cell vantages__cell--left">
+				@@include('src/modules/vantages/vantages-list.html', {
+					"arr": [
+						{
+							"icon": "vantage-02",
+							"content": "Наш автосервис обслуживает как частных лиц, так и корпоративных клиентов. Мы предлагаем <span class='vantages-list__bold'>специальные программы сотрудничества</span> для юридических лиц"
+						},
+						{
+							"icon": "vantage-03",
+							"content": "Наш автосервис один из немногих в Калининграде имеет отдельную профильную <span class='vantages-list__bold'>специализацию по автомобилям класса микроавтобус</span>"
+						},
+						{
+							"icon": "vantage-04",
+							"content": "<span class='vantages-list__bold'>Мы предлагаем весь спектр услуг</span> от замены масла в двигателе до ремонта двигателя на оборудовании рекомендованным заводом производителей."
+						},
+						{
+							"icon": "vantage-05",
+							"content": "Широчайшие <span class='vantages-list__bold'>технические возможности</span>, современное инструментальное и материальное обеспечение и профессональный <span class='vantages-list__bold'>квалифицированный штат специалистов</span>"
+						}
+					]
+				})
+			</div>
+			<div class="vantages__cell vantages__cell--right">
+				<div class="vantages__title">Мы проконсультируем Вас</div>
+				<div class="vantages__info">по любым вопросам связанным с Вашим авто</div>
+				<div class="vantages__image">
+					<img src="pic/photo-04.png" alt="Picture" class="vantages__image-picture">
+				</div>
+				<div class="vantages__position">Дмитрий Петрович</div>
+				<div class="vantages__info vantages__info--mod">Старший техник</div>
+				<div class="vantages__button">
+					<a href="#" class="btn" data-src="#popup-appointment" data-fancybox="">Записаться он-лайн</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

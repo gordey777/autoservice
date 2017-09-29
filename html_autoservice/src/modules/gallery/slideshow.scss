@@ -1,0 +1,46 @@
+.slideshow {
+	@extend %rlist;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	@include b(1300) {
+	  margin: 0 30px;
+	}
+	@include b(tablet) {
+	  margin: 0 20px;
+	}
+	@include b(mobile) {
+	  margin: 0 15px;
+	}
+	&__column {
+		height: 540px;
+		vertical-align: top;
+		@include b(tablet) {
+		  height: 400px;
+		}
+	}
+	&__row {
+		@extend %rlist;
+		height: 270px;
+		@include b(tablet) {
+		  height: 200px;
+		}
+	}
+	&__cell {
+		width: 50%;
+		height: 100%;
+		display: inline-block;
+	}
+	&__inner {
+		background-size: cover;
+		background-position: center center;
+		height: 100%;
+		width: 100%;
+		position: relative;
+		&:before {
+			@include before-img(calc(100% + 2px),calc(100% + 2px));
+			border: 1px solid #fff;
+			top: -1px;
+			left: -1px;
+		}
+	}
+}

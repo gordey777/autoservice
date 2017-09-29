@@ -1,0 +1,27 @@
+@@include('src/modules/head/head.html', {"title": "gallery"}) 
+		<div class="wrapper">
+			@@include('src/modules/header/header.html')
+			<main class="content">
+				<div class="container">
+					@@include('src/modules/breadcrumbs/breadcrumbs.html', {
+						"arr": [
+							{
+								"link": "Главная"
+							}
+						],
+						"lastItem": "Новости"
+					})
+					<h1 class="container__title container__title--mod">Фотогалерея</h1>
+					<span class="container__title container__title--sm">нашего автосервиса</span>
+					<div class="gallery-holder">
+						@@include('src/modules/gallery/gallery-block.html')
+						@@include('src/modules/gallery/gallery-block.html')
+						@@include('src/modules/gallery/gallery-block.html')
+					</div>
+				</div>
+			</main>
+		@@include('src/modules/map/map.html')
+		</div>
+	@@include('src/modules/footer/footer.html')
+@@include('src/modules/foot/foot.html')
+

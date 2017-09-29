@@ -1,0 +1,191 @@
+.contact-block {
+	&--mod {
+		padding: 40px 0;
+	}
+	&__wrapper {
+		font-size: 0;
+		line-height: 0;
+		border: 2px dotted rgba($white, 0.4);
+		padding: 28px 28px 28px;
+		@include b(mobile) {
+		  text-align: center;
+		  padding: 20px 20px;
+		}
+	}
+	&__telephone {
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% - 280px);
+		color: $white;
+		text-transform: uppercase;
+		color: $red;
+		padding-right: 10px;
+		padding-bottom: 11px;
+		@include b(mobile) {
+		  width: 100%;
+		  padding-right: 0;
+		  padding-bottom: 20px;
+		}
+		&-inner {
+			font-size: 15px;
+			line-height: 1.2;
+			font-weight: 900;
+			letter-spacing: .6px;
+			display: inline-block;
+			vertical-align: bottom;
+			&--yellow {
+				color: $yellow;
+				padding-right: 3px;
+			}
+			&--link {
+				color: $white;
+				font-size: 25px;
+				font-weight: 700;
+				padding: 0 7px;
+				letter-spacing: .1px;
+				margin-bottom: -2px;
+				&:hover {
+					color: $yellow;
+				}
+			}
+		}
+	}
+	&__button {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: middle;
+		width: 280px;
+		@include b(mobile) {
+		  width: 100%;
+		  max-width: 280px;
+		}
+		& .btn {
+			width: 100%;
+		}
+	}
+	background-position: center center;
+	background-size: cover;
+	background-color: $main;
+	padding: 61px 0 59px;
+	&__holder {
+		@extend %rlist;
+		margin: 0 -15px -20px;
+	}
+	&__cell {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 15px 20px;
+		&--left {
+			width: 41%;
+			padding: 10px 20px 10px;
+			position: relative;
+			z-index: 1;
+			.contact-block__inner {
+				position: relative;
+				&:before {
+					content: "";
+					height: calc(100% + 20px);
+					width: calc(100% + 20px);
+					border: 2px dotted rgba($white, .4);
+
+					position: absolute;
+					top: -10px;
+					left: -10px;
+					z-index: -1;
+				}
+			}
+		}
+		&--right {
+			width: 59%;
+		}
+		@include b(mobile) {
+		  width: 100%;
+		  padding: 15px 20px;
+		}
+	}
+	&__inner {
+		padding: 34px 32px 27px;
+		background-color: $white;
+		position: relative;
+		z-index: 1;
+		@include b(tablet) {
+			padding: 34px 20px 27px;
+		}
+		@include b(mobile) {
+		  padding: 20px 15px;
+		}
+	}
+	&__title {
+		color: $main;
+		padding-bottom: 8px;
+		text-align: center;
+	}
+	&__info {
+		color: $red;
+		font-size: 14px;
+		font-weight: 400;
+		text-align: center;
+		padding-bottom: 20px;
+		letter-spacing: .3px;
+	}
+	&__box:not(:last-child) {
+		padding-bottom: 14px;
+	}
+	&__subtitle {
+		color: $red;
+		font-size: 11px;
+		font-weight: 700;
+		padding-bottom: 4px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		line-height: 1.4;
+	}
+	&__row {
+		@extend %rlist;
+		margin: 0 -5px;
+		padding-bottom: 4px;
+	}
+	&__column {
+		@extend %ulist;
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		padding: 0 5px;
+		@include b(mobile) {
+		  width: 100%;
+		}
+	}
+	&__submit {
+		text-align: center;
+		margin-bottom: -48px;
+	}
+	&__modified {
+		max-width: 830px;
+		margin: 0 auto;
+		position: relative;
+		margin-top: 21px;
+		margin-bottom: 18px;
+		@include b(900) {
+		  margin: 21px 30px 18px;
+		}
+		@include b(mobile) {
+		  margin: 10px 15px;
+		}
+		&:after {
+			content: "";
+			height: calc(100% + 2px);
+			width: calc(100% + 62px);
+			border: 2px dotted rgba($white, .4);
+			z-index: 0;
+
+			position: absolute;
+			top: -32px;
+			left: -31px;
+			@include b(mobile) {
+			  width: calc(100% + 40px);
+			  left: -20px;
+			}
+		}
+	}
+}
