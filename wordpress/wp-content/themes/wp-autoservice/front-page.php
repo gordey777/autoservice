@@ -2,10 +2,7 @@
 
   <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-
-<?php //the_title(); ?>
-      <?php the_content(); ?>
-      <?php edit_post_link(); ?>
+    <?php //edit_post_link(); ?>
 
     <main id="post-<?php the_ID(); ?>" <?php post_class(' index-pg'); ?>>
       <div class="intro bg-gray-dotted">
@@ -49,7 +46,6 @@
 
           </div>
 
-
           <?php if( have_rows('advantages') ): ?>
            <ul class="advantages">
               <?php while ( have_rows('advantages') ) : the_row(); ?>
@@ -84,14 +80,16 @@
               <?php  endwhile; ?>
             </ul>
           <?php endif; ?>
-
         </div>
       </div>
+
+
       <div class="service-hold">
         <div class="container">
           <div class="container__title container__title--mod red">Наши услуги</div>
           <div class="container__title container__title--sm black">В вашем распоряжении</div>
           <div class="service-list">
+
             <div class="service__item">
               <a href="#" class="service__link">
                 <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-01.png');"></div>
@@ -99,130 +97,13 @@
                   <span class="service__title-inner">Ремонт подвески Ремонт подвески Ремонт подвески Ремонт подвески Ремонт подвески Ремонт подвески </span>
                 </div>
               </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-02.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт тормозной системы</span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-03.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт двигателя </span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-04.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт выхлопной системы</span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-01.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт подвески</span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-02.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт тормозной системы</span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-03.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт двигателя </span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-04.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт выхлопной системы</span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-01.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт коробки передач</span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-02.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Диагностика и ремонт топливной системы</span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-03.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт автоэлектрики </span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-04.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Дополнительное оборудование</span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-01.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт подвески</span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-02.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт тормозной системы</span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-03.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт двигателя </span>
-                </div>
-              </a>
-            </div>
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-04.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт выхлопной системы</span>
-                </div>
-              </a>
-            </div>
+            </div><!-- /.service__item -->
+
+
           </div>
         </div>
-      </div>
+      </div><!-- /.service-hold -->
+
       <div class="about bg-gray">
         <div class="container">
           <div class="about__holder">
@@ -230,7 +111,10 @@
               <div class="about__inner about__inner--mod js-equal-height">
                 <div class="about__title about__title--mod">Как к нам добраться</div>
                 <div class="video">
-                  <a href="#" class="video__link" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/bg/bg-video.png');" data-src="#popup-video" data-fancybox>
+
+                  <?php $videoholder = get_field('videoholder'); ?>
+
+                  <a href="#" class="video__link" <?php if ($videoholder) { ?> style="background-image: url( <?php echo $videoholder['url']; ?> );"<?php } ?> data-src="#popup-video" data-fancybox>
                     <div class="video__arrow">
                       <svg class="icon-video-arrow video__arrow-icon">
                         <use xlink:href="#video-arrow"></use>
@@ -240,229 +124,182 @@
                 </div>
               </div>
             </div>
-            <div class="about__cell">
-              <div class="about__inner js-equal-height">
-                <div class="about__title">Ремонт автомобилей</div>
-                <div class="about__subtitle">Ведущих мировых производителей</div>
-                <div class="brand-slider brand-slider--mod js-brand-slider-mod is-loading">
-                  <div class="brand-slider__item">
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-01.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-04.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                  </div>
-                  <div class="brand-slider__item">
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-02.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-05.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                  </div>
-                  <div class="brand-slider__item">
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-03.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-06.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                  </div>
-                  <div class="brand-slider__item">
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-01.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-04.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                  </div>
-                  <div class="brand-slider__item">
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-02.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-05.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                  </div>
-                  <div class="brand-slider__item">
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-03.png" alt="Picture" class="brand-slider__image">
-                    </a>
-                    <a href="#" class="brand-slider__link">
-                      <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-06.png" alt="Picture" class="brand-slider__image">
-                    </a>
+
+            <?php if (have_rows('brands_slider')) { ?>
+              <?php $brands = get_field('brands_slider'); ?>
+              <?php if( $brands ): ?>
+                <?php
+                $i_max = count($brands);
+                $n_max = ($i_max / 2) + 1;
+
+                $i = 0;
+                $k = 0; ?>
+
+                <div class="about__cell">
+                  <div class="about__inner js-equal-height">
+                    <div class="about__title">Ремонт автомобилей <?php echo (8 % 2)."\n"; ?></div>
+                    <div class="about__subtitle">Ведущих мировых производителей</div>
+                    <div class="brand-slider brand-slider--mod js-brand-slider-mod is-loading">
+
+                      <?php while ( $k < $n_max ) { ?>
+
+                        <?php if ( $i < $i_max ) { ?>
+                          <div class="brand-slider__item">
+                            <?php if ($i < $i_max ) { ?>
+                              <a href="<?php echo  $brands[$i]['link']; ?>" class="brand-slider__link">
+                                <img src="<?php echo  $brands[$i]['img']['url']; ?>" alt="<?php echo  $brands[$i]['title']; ?>" title="<?php echo  $brands[$i]['title']; ?>" class="brand-slider__image">
+                              </a>
+                              <?php $i++; ?>
+                            <?php } ?>
+
+                            <?php if ($i < $i_max ) { ?>
+                              <a href="<?php echo  $brands[$i]['link']; ?>" class="brand-slider__link">
+                                <img src="<?php echo  $brands[$i]['img']['url']; ?>" alt="<?php echo  $brands[$i]['title']; ?>" title="<?php echo  $brands[$i]['title']; ?>" class="brand-slider__image">
+                              </a>
+                              <?php $i++; ?>
+                            <?php } ?>
+                          </div>
+                        <?php } ?>
+                        <?php $k++; ?>
+
+                      <?php } // end while ?>
+
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              <?php endif; ?>
+            <?php } // end if have_rows ?>
+
           </div>
         </div>
       </div>
+
       <div class="vantages bg-red-dotted">
         <div class="container">
-          <div class="container__title container__title--mod white">Почему выбирают</div>
-          <div class="container__title container__title--sm white">наш автосервис?</div>
+          <div class="container__title container__title--mod white"><?php the_field('why_title'); ?></div>
+          <div class="container__title container__title--sm white"><?php the_field('why_subtitle'); ?></div>
+
           <div class="vantages__holder">
-            <div class="vantages__cell vantages__cell--left">
-              <ul class="vantages-list">
-                <li class="vantages-list__item">
-                  <span class="vantages-list__image js-equal-height">
-      <svg class="icon-vantage-01 vantages-list__icon">
-        <use xlink:href="#vantage-01"></use>
-      </svg>
-      <span class="vantages-list__numb">13</span>
-                  </span>
-                  <span class="vantages-list__content js-equal-height">
-      <span class="vantages-list__inner"><span class='vantages-list__bold'>Более 13 лет</span>, наш автосервис оказывает услуги по ремонту и техническому обслуживанию автомобилей</span>
-                  </span>
-                </li>
-                <li class="vantages-list__item">
-                  <span class="vantages-list__image js-equal-height">
-      <svg class="icon-vantage-02 vantages-list__icon">
-        <use xlink:href="#vantage-02"></use>
-      </svg>
-    </span>
-                  <span class="vantages-list__content js-equal-height">
-      <span class="vantages-list__inner">Наш автосервис обслуживает как частных лиц, так и корпоративных клиентов. Мы предлагаем <span class='vantages-list__bold'>специальные программы сотрудничества</span> для юридических лиц</span>
-                  </span>
-                </li>
-                <li class="vantages-list__item">
-                  <span class="vantages-list__image js-equal-height">
-      <svg class="icon-vantage-03 vantages-list__icon">
-        <use xlink:href="#vantage-03"></use>
-      </svg>
-    </span>
-                  <span class="vantages-list__content js-equal-height">
-      <span class="vantages-list__inner">Наш автосервис один из немногих в Калининграде имеет отдельную профильную <span class='vantages-list__bold'>специализацию по автомобилям класса микроавтобус</span></span>
-                  </span>
-                </li>
-                <li class="vantages-list__item">
-                  <span class="vantages-list__image js-equal-height">
-      <svg class="icon-vantage-04 vantages-list__icon">
-        <use xlink:href="#vantage-04"></use>
-      </svg>
-    </span>
-                  <span class="vantages-list__content js-equal-height">
-      <span class="vantages-list__inner"><span class='vantages-list__bold'>Мы предлагаем весь спектр услуг</span> от замены масла в двигателе до ремонта двигателя на оборудовании рекомендованным заводом производителей.</span>
-                  </span>
-                </li>
-                <li class="vantages-list__item">
-                  <span class="vantages-list__image js-equal-height">
-      <svg class="icon-vantage-05 vantages-list__icon">
-        <use xlink:href="#vantage-05"></use>
-      </svg>
-    </span>
-                  <span class="vantages-list__content js-equal-height">
-      <span class="vantages-list__inner">Широчайшие <span class='vantages-list__bold'>технические возможности</span>, современное инструментальное и материальное обеспечение и профессональный <span class='vantages-list__bold'>квалифицированный штат специалистов</span></span>
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div class="vantages__cell vantages__cell--right">
-              <div class="vantages__title">Мы проконсультируем Вас</div>
-              <div class="vantages__info">по любым вопросам связанным с Вашим авто</div>
-              <div class="vantages__image">
-                <img src="<?php echo get_template_directory_uri(); ?>/pic/photo-04.png" alt="Picture" class="vantages__image-picture">
+            <?php if( have_rows('why_advantages') ): ?>
+              <div class="vantages__cell vantages__cell--left">
+                <ul class="vantages-list">
+                  <?php while ( have_rows('why_advantages') ) : the_row(); ?>
+                    <li class="vantages-list__item">
+                      <span class="vantages-list__image js-equal-height">
+                        <svg class="icon-<?php the_sub_field('icon_id'); ?> vantages-list__icon">
+                          <use xlink:href="#<?php the_sub_field('icon_id'); ?>"></use>
+                        </svg>
+                        <?php if ( get_sub_field('icon_value') ) { ?>
+                          <span class="vantages-list__numb"><?php the_sub_field('icon_value'); ?></span>
+                        <?php } ?>
+                      </span>
+                      <span class="vantages-list__content js-equal-height">
+                        <span class="vantages-list__inner">
+                          <?php the_sub_field('adv_content'); ?>
+                        </span>
+                      </span>
+                    </li>
+                  <?php  endwhile; ?>
+                </ul>
               </div>
-              <div class="vantages__position">Дмитрий Петрович</div>
-              <div class="vantages__info vantages__info--mod">Старший техник</div>
+            <?php endif; ?>
+
+
+            <div class="vantages__cell vantages__cell--right">
+              <div class="vantages__title"><?php the_field('consalt_title'); ?></div>
+              <div class="vantages__info"><?php the_field('consalt_subtitle'); ?></div>
+              <div class="vantages__image">
+                <?php $consultFoto = get_field('consult_foto'); ?>
+                <?php if ($consultFoto) { ?>
+                  <img src="<?php echo $consultFoto['url']; ?>" alt="<?php the_field('consalt_title'); ?>, <?php the_field('consalt_subtitle'); ?>" class="vantages__image-picture">
+                <?php } ?>
+              </div>
+              <div class="vantages__position"><?php the_field('consult_name'); ?></div>
+              <div class="vantages__info vantages__info--mod"><?php the_field('consult_work'); ?></div>
               <div class="vantages__button">
                 <a href="#" class="btn" data-src="#popup-appointment" data-fancybox="">Записаться он-лайн</a>
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
-      <div class="slideshow-hold">
-        <div class="container">
-          <div class="container__title container__title--mod">Фотогалерея</div>
-          <div class="container__title container__title--sm">нашего автосервиса</div>
-          <div class="slideshow js-slideshow">
-            <div class="slideshow__column">
-              <div class="slideshow__row">
-                <div class="slideshow__cell">
-                  <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-01.png" class="slideshow__link" data-fancybox="1">
-                    <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-01.png');"></div>
-                  </a>
-                </div>
-                <div class="slideshow__cell">
-                  <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-02.png" class="slideshow__link" data-fancybox="1">
-                    <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-02.png');"></div>
-                  </a>
-                </div>
-              </div>
-              <div class="slideshow__row">
-                <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-03.png" class="slideshow__link" data-fancybox="1">
-                  <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-03.png');"></div>
-                </a>
-              </div>
-            </div>
-            <div class="slideshow__column">
-              <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-04.png" class="slideshow__link" data-fancybox="1">
-                <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-04.png');"></div>
-              </a>
-            </div>
-            <div class="slideshow__column">
-              <div class="slideshow__row">
-                <div class="slideshow__cell">
-                  <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-01.png" class="slideshow__link" data-fancybox="1">
-                    <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-01.png');"></div>
-                  </a>
-                </div>
-                <div class="slideshow__cell">
-                  <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-02.png" class="slideshow__link" data-fancybox="1">
-                    <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-02.png');"></div>
-                  </a>
-                </div>
-              </div>
-              <div class="slideshow__row">
-                <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-03.png" class="slideshow__link" data-fancybox="1">
-                  <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-03.png');"></div>
-                </a>
-              </div>
-            </div>
-            <div class="slideshow__column">
-              <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-04.png" class="slideshow__link" data-fancybox="1">
-                <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-04.png');"></div>
-              </a>
-            </div>
-            <div class="slideshow__column">
-              <div class="slideshow__row">
-                <div class="slideshow__cell">
-                  <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-01.png" class="slideshow__link" data-fancybox="1">
-                    <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-01.png');"></div>
-                  </a>
-                </div>
-                <div class="slideshow__cell">
-                  <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-02.png" class="slideshow__link" data-fancybox="1">
-                    <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-02.png');"></div>
-                  </a>
-                </div>
-              </div>
-              <div class="slideshow__row">
-                <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-03.png" class="slideshow__link" data-fancybox="1">
-                  <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-03.png');"></div>
-                </a>
-              </div>
-            </div>
-            <div class="slideshow__column">
-              <a href="<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-04.png" class="slideshow__link" data-fancybox="1">
-                <div class="slideshow__inner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/slideshow/photo-04.png');"></div>
-              </a>
+
+      <?php $homeGallery = get_field('home_gallery'); ?>
+
+      <?php if( $homeGallery ):
+        $i_max = count($homeGallery);
+        $n_max = ($i_max / 4) + 1;
+        $i = 0;
+        $k = 0; ?>
+
+        <div class="slideshow-hold">
+          <div class="container">
+            <div class="container__title container__title--mod"><?php the_field('gallery_title'); ?></div>
+            <div class="container__title container__title--sm"><?php the_field('gallery_subtitle'); ?></div>
+            <div class="slideshow js-slideshow">
+              <?php while ( $k < $n_max ) { ?>
+                  <?php if ( $i < $i_max ) { ?>
+
+                    <div class="slideshow__column">
+                      <div class="slideshow__row">
+
+                        <?php if ($i < $i_max ) { ?>
+                          <div class="slideshow__cell">
+                            <a href="<?php echo  $homeGallery[$i]['url']; ?>" class="slideshow__link" data-fancybox="1">
+                              <div class="slideshow__inner" style="background-image: url('<?php echo $homeGallery[$i]['sizes']['medium']; ?>');"></div>
+                            </a>
+                          </div>
+                          <?php $i++; ?>
+                        <?php } ?>
+                        <?php if ($i < $i_max ) { ?>
+                          <div class="slideshow__cell">
+                            <a href="<?php echo  $homeGallery[$i]['url']; ?>" class="slideshow__link" data-fancybox="1">
+                              <div class="slideshow__inner" style="background-image: url('<?php echo $homeGallery[$i]['sizes']['medium']; ?>');"></div>
+                            </a>
+                          </div>
+                          <?php $i++; ?>
+                        <?php } ?>
+
+                      </div>
+                        <?php if ($i < $i_max ) { ?>
+                          <div class="slideshow__row">
+                            <a href="<?php echo  $homeGallery[$i]['url']; ?>" class="slideshow__link" data-fancybox="1">
+                              <div class="slideshow__inner" style="background-image: url('<?php echo $homeGallery[$i]['sizes']['medium']; ?>');"></div>
+                            </a>
+                          </div>
+                          <?php $i++; ?>
+                        <?php } ?>
+                    </div>
+
+                    <?php if ($i < $i_max ) { ?>
+                      <div class="slideshow__column">
+                        <a href="<?php echo  $homeGallery[$i]['url']; ?>" class="slideshow__link" data-fancybox="1">
+                          <div class="slideshow__inner" style="background-image: url('<?php echo $homeGallery[$i]['sizes']['medium']; ?>');"></div>
+                        </a>
+                      </div>
+                      <?php $i++; ?>
+                    <?php } ?>
+
+                  <?php } ?>
+                  <?php $k++; ?>
+              <?php } ?>
+
             </div>
           </div>
         </div>
-      </div>
+      <?php endif; ?>
+
+
+
       <div class="content-block bg-gray-dotted">
         <div class="container">
-          <div class="container__title container__title--mod red">Автоцентр киевский</div>
-          <div class="container__title container__title--sm black">Мы работаем для вас</div>
+          <div class="container__title container__title--mod red"><?php bloginfo( 'name' ); ?></div>
+          <div class="container__title container__title--sm black"><?php echo get_bloginfo('description', 'display'); ?></div>
           <div class="holder">
             <div class="holder__wrap">
-              <img src="<?php echo get_template_directory_uri(); ?>/pic/photo-01.png" alt="Picture" class="alignleft">
-              <p>Каждый автовладелец знает, что для безотказной работы транспортного средства необходимо позаботиться о своевременной профилактике всех технических узлов. Особенно это касается тех <a href="#">автолюбителей</a>, которым часто приходится ездить в Киев и другие большие города. Ведь поломка на дороге мегаполиса может доставить массу проблем. Долговечность работы двигателя, систем и других агрегатов автомобиля зависит от состояния фильтров, качества смазочных материалов и технических жидкостей. В среднем проходить ТО рекомендуется через каждые 10 тыс. км пробега, так как в нашей стране условия эксплуатации автомобиля считаются достаточно тяжелыми. Многие водители, которые не придерживаются этого правила, сталкиваются с ситуацией, когда автомобилю срочно необходим ремонт. Вряд ли в спешке вы сможете найти хороший автосервис.</p>
-              <p>Наш автосервис производит ремонт ходовой, ремонт/капремонт двигателя, шиномонтаж, ремонт бамперов. Особое внимание стоит уделить проводке автомобиля, ведь именно она достаточно часто становится причиной пожара. При необходимости вашего "железного коня" осмотрит наш высококвалифицированный автоэлектрик.</p>
+              <?php the_content(); ?>
             </div>
           </div>
         </div>

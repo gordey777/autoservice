@@ -20,63 +20,13 @@
             <div class="footer__box js-acc-mod-item">
               <div class="footer__title container__subtitle js-acc-mod-trigger arrow">Услуги</div>
               <div class="footer__list js-acc-mod-content">
-                <ul class="simple-list">
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Ремонт подвески </a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Ремонт тормозной системы</a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Ремонт двигателя </a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Ремонт выхлопной системы </a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Ремонт коробки передач</a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Ремонт и заправка кондиционера</a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Ремонт автоэлектрики </a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Дополнительное оборудование</a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Развал схождение</a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Ремонт карданного вала </a>
-                  </li>
-                </ul>
+                <?php wpeFootServNav(); ?>
               </div>
             </div>
             <div class="footer__box js-acc-mod-item">
               <div class="footer__title container__subtitle js-acc-mod-trigger arrow">Об автосервисе</div>
               <div class="footer__list js-acc-mod-content">
-                <ul class="simple-list">
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Акции</a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Контакты</a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Об автосервисе</a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Новости</a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link">Цены</a>
-                  </li>
-                  <li class="simple-list__item">
-                    <a href="#" class="simple-list__link simple-list__link--mod">Автозапчасти</a>
-                  </li>
-                </ul>
+                <?php wpeFootNav(); ?>
               </div>
             </div>
           </div>
@@ -90,7 +40,7 @@
                   </svg>
                 </span>
                   <span class="loc-list__content">
-                  <span class="loc-list__content-inner">г. Калининград, ул. Киевская</span>
+                  <span class="loc-list__content-inner"><?php the_field('addres', 37); ?></span>
                   </span>
                 </li>
                 <li class="loc-list__item">
@@ -100,7 +50,7 @@
                   </svg>
                 </span>
                   <span class="loc-list__content">
-                  <a href="tel:+74012999999" class="loc-list__content-inner loc-list__content-inner--link">+ 7 (4012) 999 999</a>
+                  <a href="tel:<?php the_field('phone', 37); ?>" class="loc-list__content-inner loc-list__content-inner--link"><?php the_field('phone', 37); ?></a>
                 </span>
                 </li>
                 <li class="loc-list__item">
@@ -110,7 +60,7 @@
                   </svg>
                 </span>
                   <span class="loc-list__content">
-                  <span class="loc-list__content-inner">Часы работы:  09:00&nbsp;-&nbsp;21:00 <span class="loc-list__content-inner--mod">Без выходных</span></span>
+                  <span class="loc-list__content-inner"><?php the_field('working_hours', 37); ?></span>
                   </span>
                 </li>
               </ul>
@@ -121,7 +71,7 @@
                   <svg class="icon-logo logo__icon">
                     <use xlink:href="#logo"></use>
                   </svg>
-                  <span class="logo__text">Автоцентр Киевский</span>
+                  <span class="logo__text"><?php bloginfo( 'name' ); ?></span>
                 </a>
               </div>
               <div class="footer__button">
@@ -133,7 +83,7 @@
       </div>
       <div class="footer__bottom">
         <div class="container">
-          <div class="footer__copy">Все права защищены. Перепечатка информации возможна только при наличии согласия администрации и активной ссылки на источник.</div>
+          <div class="footer__copy"><?php the_field('copyright', 37); ?></div>
           <div class="footer__site">
             <a href="#" class="footer__site-link">Мультисайт</a>
           </div>
@@ -265,13 +215,17 @@
   </div>
   <!-- POPUP PICK END -->
   <!-- POPUP VIDEO-->
-  <div class="popup" id="popup-video">
-    <div class="popup-holder">
-      <div class="popup-video">
-        <iframe class="popup-video__video" src="https://www.youtube.com/embed/D3LpQkOpD20" frameborder="0" allowfullscreen width="854" height="480"></iframe>
+  <?php $videomap = get_field('videomap', 37); ?>
+  <?php if ( !empty($videomap)) : ?>
+    <div class="popup" id="popup-video">
+      <div class="popup-holder">
+        <div class="popup-video">
+          <iframe class="popup-video__video" src="https://www.youtube.com/embed/<?php echo $videomap['vid']; ?>" frameborder="0" allowfullscreen width="854" height="480"></iframe>
+        </div>
       </div>
     </div>
-  </div>
+  <?php endif; ?>
+
   <!-- POPUP VIDEO END -->
   <!-- POPUP END -->
   <?php wp_footer(); ?>
