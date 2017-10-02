@@ -263,13 +263,13 @@ function wpeExcerpt($length_callback = '', $more_callback = '') {
 
 //  Custom View Article link to Post
 //  RU: Добавляем "Читать дальше" к обрезанным записям
-/*
+
 function html5_blank_view_article($more) {
   global $post;
-  return '... <!-- noindex --><a rel="nofollow" class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'wpeasy') . '</a><!-- /noindex -->';
+  return '...';
 }
 add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
-*/
+
 // Remove the <div> surrounding the dynamic navigation to cleanup markup
 add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
 function my_wp_nav_menu_args($args = '') {
@@ -318,8 +318,9 @@ function html5wp_pagination() {
       'base' => str_replace($big, '%#%', get_pagenum_link($big)),
       'format' => '?paged=%#%',
       'current' => max(1, get_query_var('paged')),
-      'prev_text' => __('« Previous'),
-      'next_text' => __('Next »'),
+      'prev_text' => '<span class="pagination__inner pagination__inner--arrow"></span>',
+      'next_text' => '<span class="pagination__inner pagination__inner--arrow pagination__inner--next"></span>',
+      'type' => 'list',
       'total' => $wp_query->max_num_pages
     )
   );
@@ -494,7 +495,7 @@ function easy_breadcrumbs() {
                 $post_type_object = get_post_type_object($post_type);
                 $post_type_archive = get_post_type_archive_link($post_type);
 
-                echo '<li class="breadcrumbs__item arrow item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
+                echo '<li class="breadcrumbs__item arrow item-cat item-custom-post-type-' . $post_type . '"><a class="breadcrumbs__inner bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
                 //echo '<li class="separator"> ' . $separator . ' </li>';
 
             }
@@ -513,7 +514,7 @@ function easy_breadcrumbs() {
                 $post_type_object = get_post_type_object($post_type);
                 $post_type_archive = get_post_type_archive_link($post_type);
 
-                echo '<li class="breadcrumbs__item arrow item-cat item-custom-post-type-' . $post_type . '"><a class="bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
+                echo '<li class="breadcrumbs__item arrow item-cat item-custom-post-type-' . $post_type . '"><a class="breadcrumbs__inner bread-cat bread-custom-post-type-' . $post_type . '" href="' . $post_type_archive . '" title="' . $post_type_object->labels->name . '">' . $post_type_object->labels->name . '</a></li>';
                 //echo '<li class="separator"> ' . $separator . ' </li>';
 
             }
@@ -531,10 +532,14 @@ function easy_breadcrumbs() {
                 $cat_parents = explode(',',$get_cat_parents);
 
                 // Loop through parent categories and store in variable $cat_display
-                $cat_display = '';
-                foreach($cat_parents as $parents) {
-                    $cat_display .= '<li class="breadcrumbs__item arrow item-cat">'.$parents.'</li>';
-                    //$cat_display .= '<li class="separator"> ' . $separator . ' </li>';
+                $get_parents_link = get_category_link( $last_category->cat_ID );
+                $get_parents_name = $last_category->cat_name;
+               $cat_display = '';
+                 foreach($cat_parents as $parents) {
+                    /*$cat_display .= '<li class="breadcrumbs__item arrow item-cat">'.$parents.'</li>';
+
+                    //$cat_display .= '<li class="separator"> ' . $separator . ' </li>';*/
+                    $cat_display .= '<li class="breadcrumbs__item arrow item-cat" ><a class="breadcrumbs__inner bread-cat" href="' . $get_parents_link . '" title="' . $get_parents_name . '">' . $get_parents_name . '</a></li>';
                 }
 
             }
@@ -559,7 +564,7 @@ function easy_breadcrumbs() {
             // Else if post is in a custom taxonomy
             } else if(!empty($cat_id)) {
 
-                echo '<li class="breadcrumbs__item arrow item-cat item-cat-' . $cat_id . ' item-cat-' . $cat_nicename . '"><a class="bread-cat bread-cat-' . $cat_id . ' bread-cat-' . $cat_nicename . '" href="' . $cat_link . '" title="' . $cat_name . '">' . $cat_name . '</a></li>';
+                echo '<li class="breadcrumbs__item arrow item-cat item-cat-' . $cat_id . ' item-cat-' . $cat_nicename . '"><a class="breadcrumbs__inner bread-cat bread-cat-' . $cat_id . ' bread-cat-' . $cat_nicename . '" href="' . $cat_link . '" title="' . $cat_name . '">' . $cat_name . '</a></li>';
                 //echo '<li class="separator"> ' . $separator . ' </li>';
                 echo '<li class="item-current breadcrumbs__item item-' . $post->ID . '"><span class="bread-current breadcrumbs__inner breadcrumbs__inner--last bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</span></li>';
 
@@ -626,11 +631,11 @@ function easy_breadcrumbs() {
             // Day archive
 
             // Year link
-            echo '<li class="breadcrumbs__item arrow item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</a></li>';
+            echo '<li class="breadcrumbs__item arrow item-year item-year-' . get_the_time('Y') . '"><a class="breadcrumbs__inner bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</a></li>';
             //echo '<li class="separator separator-' . get_the_time('Y') . '"> ' . $separator . ' </li>';
 
             // Month link
-            echo '<li class="breadcrumbs__item arrow item-month item-month-' . get_the_time('m') . '"><a class="bread-month bread-month-' . get_the_time('m') . '" href="' . get_month_link( get_the_time('Y'), get_the_time('m') ) . '" title="' . get_the_time('M') . '">' . get_the_time('M') . ' Archives</a></li>';
+            echo '<li class="breadcrumbs__item arrow item-month item-month-' . get_the_time('m') . '"><a class="breadcrumbs__inner bread-month bread-month-' . get_the_time('m') . '" href="' . get_month_link( get_the_time('Y'), get_the_time('m') ) . '" title="' . get_the_time('M') . '">' . get_the_time('M') . ' Archives</a></li>';
             //echo '<li class="separator separator-' . get_the_time('m') . '"> ' . $separator . ' </li>';
 
             // Day display
@@ -641,11 +646,11 @@ function easy_breadcrumbs() {
             // Month Archive
 
             // Year link
-            echo '<li class="breadcrumbs__item arrow item-year item-year-' . get_the_time('Y') . '"><a class="bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</a></li>';
+            echo '<li class="breadcrumbs__item arrow item-year item-year-' . get_the_time('Y') . '"><a class="breadcrumbs__inner bread-year bread-year-' . get_the_time('Y') . '" href="' . get_year_link( get_the_time('Y') ) . '" title="' . get_the_time('Y') . '">' . get_the_time('Y') . ' Archives</a></li>';
             //echo '<li class="separator separator-' . get_the_time('Y') . '"> ' . $separator . ' </li>';
 
             // Month display
-            echo '<li class="breadcrumbs__item arrow item-month item-month-' . get_the_time('m') . '"><span class="bread-month bread-month-' . get_the_time('m') . '" title="' . get_the_time('M') . '">' . get_the_time('M') . ' Archives</span></li>';
+            echo '<li class="breadcrumbs__item arrow item-month item-month-' . get_the_time('m') . '"><span class=" breadcrumbs__inner breadcrumbs__inner--last bread-month bread-month-' . get_the_time('m') . '" title="' . get_the_time('M') . '">' . get_the_time('M') . ' Archives</span></li>';
 
         } else if ( is_year() ) {
 
@@ -714,9 +719,83 @@ function disable_emojicons_tinymce( $plugins ) {
   }
 }
 
+//remove p around img
+function filter_ptags_on_images($content){
+    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+add_filter('the_content', 'filter_ptags_on_images');
 
 
 require_once('walker_bem_menu.php');
+
+
+//Gallery shortcode
+function insert_gallery() {
+
+  $pageGallery = get_field('page_gallery');
+
+  if( $pageGallery ):
+      $html = '</div><!-- /.static-content -->
+              <div class="holder">
+                <h4>';
+      $html = $html . get_field('page_gallery_title');
+      $html = $html . '</h4>
+                <div class="gallery">
+                  <div class="gallery js-slider is-loading">';
+      foreach( $pageGallery as $image ):
+          $html = $html . '<div class="gallery__item">';
+          $html = $html . '<a href="' . $image['url'] . '" class="gallery__link" data-fancybox="1">';
+          $html = $html . '<img src="' . $image['sizes']['medium'] . '" class="gallery__image">';
+          $html = $html . '</a>';
+          $html = $html . '</div>';
+      endforeach;
+    $html = $html . '</div>';
+    $html = $html . '</div>';
+    $html = $html . '</div>';
+    $html = $html . '<div class="static-content">';
+
+  return $html;
+
+  endif;
+}
+
+add_shortcode( 'insert_gallery', 'insert_gallery' );
+//[insert_gallery]
+
+
+
+//Reg baner shortcode
+function insert_reg_baner() {
+
+
+$html = '</div><!-- /.static-content -->
+        </div><!-- /.container -->
+        <div class="contact-block contact-block--mod" style="background-image: url(' . get_template_directory_uri() . '/pic/bg/bg-contact.png);">
+          <div class="container">
+            <div class="contact-block__wrapper">
+              <div class="contact-block__telephone">
+                <span class="contact-block__telephone-inner">Запишитесь по телефону </span>
+                <a href="' . get_field('phone', 37) . '" class="contact-block__telephone-inner contact-block__telephone-inner--link">' . get_field('phone', 37) . '</a>
+                <span class="contact-block__telephone-inner contact-block__telephone-inner--yellow"> или </span>
+                <span class="contact-block__telephone-inner"> оставьте он-лайн заявку</span>
+              </div>
+              <div class="contact-block__button">
+                <a href="#" class="btn" data-src="#popup-appointment" data-fancybox>Записаться он-лайн</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="static-content">';
+
+  return $html;
+
+}
+
+add_shortcode( 'insert_reg_baner', 'insert_reg_baner' );
+//[insert_reg_baner]
+
+
 
 
 

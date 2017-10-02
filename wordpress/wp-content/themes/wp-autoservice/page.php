@@ -1,15 +1,21 @@
 <?php get_header(); ?>
 
   <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-      <h1 class="page-title inner-title"><?php the_title(); ?></h1>
-      <?php the_content(); ?>
-      <?php edit_post_link(); ?>
+    <main  id="post-<?php the_ID(); ?>" <?php post_class(' content'); ?>>
+      <div class="container">
+        <?php easy_breadcrumbs(); ?>
+        <div class="static-content">
 
-    </article>
-  <?php endwhile; endif; ?>
+            <h1 class="section__title"><?php the_title(); ?></h1><?php edit_post_link(); ?>
 
-  <?php get_sidebar(); ?>
+                <?php the_content(); ?>
+
+        </div><!-- /.static-content -->
+      </div>
+
+    </main>
+
+  <?php  endwhile;  endif; ?>
 
 <?php get_footer(); ?>

@@ -1,2227 +1,1789 @@
 <!doctype html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>prices</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- @if NODE_ENV='production' -->
-    <link rel="shortcut icon" type="image/png" href="pic/favicon.png"/>
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
-    <!-- @endif -->
+  <meta charset="utf-8">
+  <title>prices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- @if NODE_ENV='production' -->
+  <link rel="shortcut icon" type="image/png" href="pic/favicon.png" />
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- @endif -->
 </head>
+
 <body>
-	<div style="height: 0; width: 0; position: absolute;overflow: hidden;" id="svg-sprite-container">
- 		
- 	</div> 
-		<div class="wrapper">
-			<header class="header">
-	<div class="header__top js-header-fixed">
-		<div class="container">
-			<div class="header__content">
-				<div class="header__logo">
-					<a href="#" class="logo">
-						<svg class="icon-logo logo__icon">
-							<use xlink:href="#logo"></use>
-						</svg>
-						<span class="logo__text">Автоцентр Киевский</span>
-					</a>
-				</div>
-				<div class="header__cell header__cell--menu js-equal-height">
-					<ul class="nav nav--mod">
-						<li class="nav__item">
-	<div class="nav__holder js-acc-item">
-		 
-		<span class="nav__text arrow arrow--mod js-acc-trigger">Наши услуги </span>
-		<ul class="nav__drop js-equal-height js-acc-content js-acc-sub">
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт подвески</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт тормозной системы</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт двигателя</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт выхлопной системы </a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт коробки передач</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт и заправка кондиционера </a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт автоэлектрики</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Дополнительное оборудование</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Развал схождение</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт карданного вала </a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Замена жидкостей</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-		</ul>
-		
-		
-	</div>
-</li>
-					</ul>
-				</div>
-				<div class="header__cell header__cell--contact js-equal-height">
-					<div class="contact-item">
-						<span class="contact-item__image">
-							<svg class="icon-loc">
-								<use xlink:href="#loc"></use>
-							</svg>
-						</span>
-						<span class="contact-item__content">г.&nbsp;Калининград, ул.&nbsp;Киевская&nbsp;237</span>
-					</div>
-				</div>
-				<div class="header__cell header__cell--time js-equal-height">
-					<div class="contact-item">
-						<span class="contact-item__image">
-							<svg class="icon-clock">
-								<use xlink:href="#clock"></use>
-							</svg>
-						</span>
-						<span class="contact-item__content">Часы работы:  09:00&nbsp;-&nbsp;21:00
-						<span class="contact-item__content--red">Без выходных</span></span>
-					</div>
-				</div>
-				<div class="header__cell header__cell--tel js-equal-height">
-					<div class="contact-item">
-						<span class="contact-item__image">
-							<svg class="icon-tel">
-								<use xlink:href="#tel"></use>
-							</svg>
-						</span>
-						<span class="contact-item__content">
-							<a href="tel:+ 74012999999" class="contact-item__link">+&nbsp;7&nbsp;(4012)&nbsp;999&nbsp;999</a>
-						</span>
-					</div>
-				</div>
-			</div>
-			<div class="header__button">
-				<a href="#" data-src="#popup-appointment" class="btn btn--image" data-fancybox>
-					<span class="btn__image">
-						<svg class="icon-pencil">
-							<use xlink:href="#pencil"></use>
-						</svg>
-					</span>
-					<span class="btn__text">Записаться на ремонт</span>
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="header__bottom">
-		<div class="container">
-			<div class="header__content">
-				<div class="header__nav">
-					<div class="nav-mob js-nav">
-	<div class="nav-mob__trigger js-nav-trigger">
-		<span class="nav-mob__trigger-inner"></span>
-	</div>
-	<div class="nav-mob__holder js-nav-holder">
-		<div class="nav-mob__inner">
-			<ul class="nav js-flex js-acc">
-				<li class="nav__item">
-	<div class="nav__holder js-acc-item">
-		 
-		<span class="nav__text arrow arrow--mod js-acc-trigger">Услуги </span>
-		<ul class="nav__drop js-equal-height js-acc-content js-acc-sub">
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт подвески</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт тормозной системы</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт двигателя</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт выхлопной системы </a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт коробки передач</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт и заправка кондиционера </a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт автоэлектрики</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Дополнительное оборудование</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Развал схождение</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт карданного вала </a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Замена жидкостей</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-		</ul>
-		
-		
-	</div>
-</li>
-				<li class="nav__item">
-	<div class="nav__holder js-acc-item">
-		 
-		<span class="nav__text arrow arrow--mod js-acc-trigger">Ремонт микроавтобусов </span>
-		<ul class="nav__drop js-equal-height js-acc-content js-acc-sub">
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт подвески</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт тормозной системы</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-			<li class="nav__drop-item js-acc-sub-item">
-				<a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт двигателя</a>
-				<ul class="nav__sub js-equal-height js-acc-sub-content">
-
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Развал схождение</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
-	</li>
-	
-	<li class="nav__sub-item">
-		<a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
-	</li>
-	
-</ul>
-			</li>
-		
-		</ul>
-		
-		
-	</div>
-</li>
-				<li class="nav__item">
-	<div class="nav__holder js-acc-item">
-		
-		
-		<a href="#" class="nav__text"> Автозапчасти</a>
-		
-	</div>
-</li>
-				<li class="nav__item">
-	<div class="nav__holder js-acc-item">
-		
-		
-		<a href="#" class="nav__text"> Акции</a>
-		
-	</div>
-</li>
-				<li class="nav__item">
-	<div class="nav__holder js-acc-item">
-		
-		
-		<a href="#" class="nav__text"> Об автосервисе</a>
-		
-	</div>
-</li>
-				<li class="nav__item">
-	<div class="nav__holder js-acc-item">
-		
-		
-		<a href="#" class="nav__text"> Цены</a>
-		
-	</div>
-</li>
-				<li class="nav__item">
-	<div class="nav__holder js-acc-item">
-		
-		
-		<a href="#" class="nav__text"> Новости</a>
-		
-	</div>
-</li>
-				<li class="nav__item">
-	<div class="nav__holder js-acc-item">
-		
-		
-		<a href="#" class="nav__text"> Контакты</a>
-		
-	</div>
-</li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-				</div>
-			</div>
-			<div class="header__button">
-				<a href="#" class="btn btn--image btn--border" data-src="#popup-pick" data-fancybox>
-					<span class="btn__image">
-						<svg class="icon-car">
-							<use xlink:href="#car"></use>
-						</svg>
-					</span>
-					<span class="btn__text">Подобрать автозапчасть</span>
-				</a>
-			</div>
-		</div>
-	</div>
-</header>
-
-			<main class="content content--mod">
-				<div class="prices">
-					<div class="container">
-						<ul class="breadcrumbs">
-	 
-	<li class="breadcrumbs__item arrow">
-		<a href="#" class="breadcrumbs__inner">Главная</a>
-	</li>
-	
-	
-	<li class="breadcrumbs__item">
-		<span class="breadcrumbs__inner breadcrumbs__inner--last">Диагностика</span>
-	</li>
-	
-</ul>
-						<h1 class="container__title container__title--mod">ЦЕНЫ</h1>
-						<span class="container__title container__title--sm">на наши услуги</span>
-						<ul class="nav-block">
-	
-		<li class="nav-block__item">
-			<a href="#link1" class="nav-block__link js-link nav-block__link--active">Ремонт подвески</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href="#link3" class="nav-block__link js-link ">Ремонт тормозной системы</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href="#link2" class="nav-block__link js-link ">Ремонт двигателя</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href="#link4" class="nav-block__link js-link ">Ремонт выхлопной системы</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href=" " class="nav-block__link js-link ">Ремонт коробки передач</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href=" " class="nav-block__link js-link ">Диагностика и ремонт топливной системы</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href=" " class="nav-block__link js-link ">Ремонт автоэлектрики</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href=" " class="nav-block__link js-link ">Дополнительное оборудование</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href=" " class="nav-block__link js-link ">Развал схождение</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href=" " class="nav-block__link js-link ">Ремонт и заправка кондиционера</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href=" " class="nav-block__link js-link ">Замена жидкостей</a>
-		</li>
-	
-		<li class="nav-block__item">
-			<a href=" " class="nav-block__link js-link ">Техническое обслуживание</a>
-		</li>
-	
-</ul>
-						<p class="prices__info">Каждый автовладелец знает, что для безотказной работы транспортного средства необходимо позаботиться о своевременной профилактике всех технических узлов. Особенно это касается тех автолюбителей, которым часто приходится ездить в Киев и другие большие города. Ведь поломка на дороге мегаполиса может доставить массу проблем. Долговечность работы двигателя, систем и других агрегатов автомобиля зависит от состояния фильтров, качества смазочных материалов и технических жидкостей. В среднем проходить ТО рекомендуется через каждые 10 тыс. км пробега, так как в нашей стране условия эксплуатации автомобиля считаются достаточно тяжелыми. Многие водители, которые не придерживаются этого правила, сталкиваются с ситуацией, когда автомобилю срочно необходим ремонт. Вряд ли в спешке вы сможете найти хороший автосервис.</p>
-					</div>
-					<div class="contact-block contact-block--mod" style="background-image: url('pic/bg/bg-contact.png');">
-	<div class="container">
-		<div class="contact-block__wrapper">
-			<div class="contact-block__telephone">
-				<span class="contact-block__telephone-inner">Запишитесь по телефону </span>
-				<a href="tel:+74012999999" class="contact-block__telephone-inner contact-block__telephone-inner--link">+ 7 (4012) 999 999 </a>
-				<span class="contact-block__telephone-inner contact-block__telephone-inner--yellow"> или </span>
-				<span class="contact-block__telephone-inner"> оставьте он-лайн заявку</span>
-			</div>
-			<div class="contact-block__button">
-				<a href="#" class="btn" data-src="#popup-appointment" data-fancybox>Записаться он-лайн</a>
-			</div>
-		</div>
-	</div>
-</div>
-				</div>
-				<div class="container">
-					<div class="price-table-list">
-	<div class="price-table-list__row">
-		<div class="price-table-list__column">
-			<div class="price-table" id="link1">
-	 
-		<div class="price-table__head">Ремонт подвески</div>
-	
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Чистка инжектора</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">990 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замер компрессии двигателя (за 1 цилиндр)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 560 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замена охлаждающей жидкости (антефриза)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">2 500 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Жидкость ГУР</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 200 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя 8клапанов (4 цилиндра)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 850 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя 16клапанов (4 цилиндра)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">7 500 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя (6 цилиндров)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">9 500 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя (8 цилиндров)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">11 500 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замена комплекта сцепления</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 000 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замена рабочего цилиндра сцепления</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 000 руб</span></span>
-		</div>
-	</div>
-	
-</div>
-
-			<div class="price-table" id="link2">
-	 
-		<div class="price-table__head">Ремонт двигателя </div>
-	
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Чистка инжектора</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">990 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замер компрессии двигателя (за 1 цилиндр)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 560 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замена охлаждающей жидкости (антефриза)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">2 500 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Жидкость ГУР</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 200 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя 8клапанов (4 цилиндра)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 850 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя 16клапанов (4 цилиндра)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">7 500 руб</span></span>
-		</div>
-	</div>
-	
-</div>
-
-		</div>
-		<div class="price-table-list__column">
-			<div class="price-table" id="link3">
-	 
-		<div class="price-table__head">Ремонт тормозной системы</div>
-	
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Чистка инжектора</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">990 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замер компрессии двигателя (за 1 цилиндр)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 560 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замена охлаждающей жидкости (антефриза)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">2 500 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Жидкость ГУР</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 200 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя 8клапанов (4 цилиндра)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 850 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя 16клапанов (4 цилиндра)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">7 500 руб</span></span>
-		</div>
-	</div>
-	
-</div>
-
-			<div class="price-table" id="link4">
-	 
-		<div class="price-table__head">Ремонт выхлопной системы </div>
-	
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Чистка инжектора</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">990 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замер компрессии двигателя (за 1 цилиндр)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 560 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замена охлаждающей жидкости (антефриза)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">2 500 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Жидкость ГУР</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 200 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя 8клапанов (4 цилиндра)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 850 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя 16клапанов (4 цилиндра)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">7 500 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя (6 цилиндров)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">9 500 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Капитальный ремонт двигателя (8 цилиндров)</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">11 500 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замена комплекта сцепления</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 000 руб</span></span>
-		</div>
-	</div>
-	
-	<div class="price-table__row">
-		<div class="price-table__cell price-table__cell--left">
-			<span class="price-table__inner">Замена рабочего цилиндра сцепления</span>
-		</div>
-		<div class="price-table__cell price-table__cell--right">
-			<span class="price-table__inner">от <span class="price-table__price">1 000 руб</span></span>
-		</div>
-	</div>
-	
-</div>
-
-		</div>
-	</div>
-</div>
-
-					<p class="prices__info prices__info--mod">За более подробной информацией обращайтеся в нашу компанию. Мы прозведем оценку работ и подберем наиболее подходящие комплектующие.</p>
-				</div>
-			</main>
-			<div class="map">
-	<div class="map__holder" id="js-map"></div>
-	<div class="container">
-		<div class="map__box">
-			<div class="map__title container__subtitle">Как до нас добраться</div>
-			<img src="pic/photo-02.png" alt="Picture" class="map__image">
-			<div class="map__button">
-				<a href="#" class="btn" data-src="#popup-appointment" data-fancybox>Записаться он-лайн</a>
-			</div>
-		</div>
-	</div>
-</div>
-			<div class="brand-slider-holder">
-	<div class="container">
-		<div class="brand-slider-title container__subtitle">Ремонт автомобилей</div>
-		<div class="brand-slider-subtitle">всех ведущих мировых производителей с 1997 года</div>
-		<div class="brand-slider js-brand-slider is-loading">
-			
-				<div class="brand-slider__item">
-					<a href="#" class="brand-slider__link" >
-						<img src="pic/brand-slider/photo-01.png" alt="Picture" class="brand-slider__image">
-					</a>
-				</div>
-			
-				<div class="brand-slider__item">
-					<a href="#" class="brand-slider__link" >
-						<img src="pic/brand-slider/photo-02.png" alt="Picture" class="brand-slider__image">
-					</a>
-				</div>
-			
-				<div class="brand-slider__item">
-					<a href="#" class="brand-slider__link" >
-						<img src="pic/brand-slider/photo-03.png" alt="Picture" class="brand-slider__image">
-					</a>
-				</div>
-			
-				<div class="brand-slider__item">
-					<a href="#" class="brand-slider__link" >
-						<img src="pic/brand-slider/photo-04.png" alt="Picture" class="brand-slider__image">
-					</a>
-				</div>
-			
-				<div class="brand-slider__item">
-					<a href="#" class="brand-slider__link" >
-						<img src="pic/brand-slider/photo-05.png" alt="Picture" class="brand-slider__image">
-					</a>
-				</div>
-			
-				<div class="brand-slider__item">
-					<a href="#" class="brand-slider__link" >
-						<img src="pic/brand-slider/photo-06.png" alt="Picture" class="brand-slider__image">
-					</a>
-				</div>
-			
-				<div class="brand-slider__item">
-					<a href="#" class="brand-slider__link" >
-						<img src="pic/brand-slider/photo-01.png" alt="Picture" class="brand-slider__image">
-					</a>
-				</div>
-			
-				<div class="brand-slider__item">
-					<a href="#" class="brand-slider__link" >
-						<img src="pic/brand-slider/photo-02.png" alt="Picture" class="brand-slider__image">
-					</a>
-				</div>
-			
-		</div>
-	</div>
-</div>
-		</div>
-	<footer class="footer js-footer">
-	<div class="footer__wrapper" style="background-image: url('pic/bg/bg-footer.png');">
-		<div class="footer__center">
-			<div class="container">
-				<div class="footer__cell footer__cell--left js-acc-mod">
-					<div class="footer__box js-acc-mod-item">
-						<div class="footer__title container__subtitle js-acc-mod-trigger arrow">Услуги</div>
-						<div class="footer__list js-acc-mod-content">
-							<ul class="simple-list">
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Ремонт подвески </a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Ремонт тормозной системы</a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Ремонт двигателя </a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Ремонт выхлопной системы </a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Ремонт коробки передач</a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Ремонт и заправка кондиционера</a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Ремонт автоэлектрики </a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Дополнительное оборудование</a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Развал схождение</a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Ремонт карданного вала </a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer__box js-acc-mod-item">
-						<div class="footer__title container__subtitle js-acc-mod-trigger arrow">Об автосервисе</div>
-						<div class="footer__list js-acc-mod-content">
-							<ul class="simple-list">
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Акции</a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Контакты</a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Об автосервисе</a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Новости</a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link">Цены</a>
-								</li>
-								<li class="simple-list__item">
-									<a href="#" class="simple-list__link simple-list__link--mod">Автозапчасти</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="footer__cell footer__cell--right">
-					<div class="footer__box footer__box--left">
-						<ul class="loc-list">
-							<li class="loc-list__item">
-								<span class="loc-list__image">
-									<svg class="icon-loc loc-list__icon">
-										<use xlink:href="#loc"></use>
-									</svg>
-								</span>
-								<span class="loc-list__content">
-									<span class="loc-list__content-inner">г. Калининград, ул. Киевская</span>
-								</span>
-							</li>
-							<li class="loc-list__item">
-								<span class="loc-list__image">
-									<svg class="icon-tel loc-list__icon">
-										<use xlink:href="#tel"></use>
-									</svg>
-								</span>
-								<span class="loc-list__content">
-									<a href="tel:+74012999999" class="loc-list__content-inner loc-list__content-inner--link">+ 7 (4012) 999 999</a>
-								</span>
-							</li>
-							<li class="loc-list__item">
-								<span class="loc-list__image">
-									<svg class="icon-clock loc-list__icon">
-										<use xlink:href="#clock"></use>
-									</svg>
-								</span>
-								<span class="loc-list__content">
-									<span class="loc-list__content-inner">Часы работы:  09:00&nbsp;-&nbsp;21:00 <span class="loc-list__content-inner--mod">Без выходных</span></span>
-								</span>
-							</li>
-						</ul>
-					</div>
-					<div class="footer__box footer__box--right">
-						<div class="footer__logo">
-							<a href="" class="logo logo--lg">
-								<svg class="icon-logo logo__icon">
-									<use xlink:href="#logo"></use>
-								</svg>
-								<span class="logo__text">Автоцентр Киевский</span>
-							</a>
-						</div>
-						<div class="footer__button">
-							<a href="#" class="btn btn--sm" data-src="#popup-appointment" data-fancybox>Записаться на ремонт</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer__bottom">
-			<div class="container">
-				<div class="footer__copy">Все права защищены. Перепечатка информации возможна только при наличии согласия администрации и активной ссылки на источник.</div>
-				<div class="footer__site">
-					<a href="#" class="footer__site-link">Мультисайт</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-		
-		<!-- POPUP -->
-<!-- POPUP APPOINTMENT-->
-<div class="popup" id="popup-appointment">
-	<div class="popup-holder">
-		<div class="popup-appointment">
-			<div class="popup__title container__subtitle">Запишитесь на осмотр</div>
-			<div class="popup__info">Мы свяжемся с Вами в ближайше время! <br>График работы без выходных и праздничных дней с 09:00 - 21:00</div>
-			<form action="#" class="popup__form">
-				<div class="input-hold input-row">
-					<input type="text" class="input input-hold__input" placeholder="Ваше имя">
-					<span class="input-hold__image">
-						<svg class="icon-user input-hold__icon">
-							<use xlink:href="#user"></use>
-						</svg>
-					</span>
-				</div>
-				<div class="input-hold input-row">
-					<input type="tel" class="input input-hold__input" placeholder="Ваш телефон">
-					<span class="input-hold__image">
-						<svg class="icon-phone input-hold__icon">
-							<use xlink:href="#phone"></use>
-						</svg>
-					</span>
-				</div>
-				<div class="input-hold input-row">
-					<textarea name="text" id="text" placeholder="Ваше сообщение"></textarea>
-					<span class="input-hold__image">
-						<svg class="icon-message input-hold__icon">
-							<use xlink:href="#message"></use>
-						</svg>
-					</span>
-				</div>
-				<div class="popup__submit">
-					<button type="submit" class="btn">Отправить заявку</button>
-				</div>
-				<ul class="checkboxes-list">
-					<li class="checkboxes-list__item checkboxes-list__item--mod">
-						<label class="checkbox">
-							<input type="checkbox" class="checkbox__check" checked="">
-							<span class="checkbox__icon"></span>
-							<span class="checkbox__inner">
-								<span class="checkbox__text">Нажимая "Отправить", я принимаю условия обработки персональных данных</span>
-							</span>
-						</label>
-					</li>
-					<li class="checkboxes-list__item checkboxes-list__item--mod">
-						<label class="checkbox">
-							<input type="checkbox" class="checkbox__check" checked="">
-							<span class="checkbox__icon"></span>
-							<span class="checkbox__inner">
-								<span class="checkbox__text">Я ознакомлен с <a href="#" class="btn-border">Политикой конфиденциальности</a></span>
-							</span>
-						</label>
-					</li>
-				</ul>
-			</form>
-		</div>
-	</div>
-</div>
-<!-- POPUP APPOINTMENT END -->
-<!-- POPUP PICK-->
-<div class="popup" id="popup-pick">
-	<div class="popup-holder">
-		<div class="popup-appointment">
-			<div class="popup__title container__subtitle">Мы оперативно подберем</div>
-			<div class="popup__info">нужные запчасти для Вашего авто</div>
-			<form action="#" class="popup__form">
-				<div class="input-row">
-					<input type="text" class="input" placeholder="Ваше имя">
-				</div>
-				<div class="input-row">
-					<input type="tel" class="input" placeholder="Ваш телефон">
-				</div>
-				<div class="input-row">
-					<input type="text" class="input" placeholder="Марка автомобиля">
-				</div>
-				<div class="input-row">
-					<input type="text" class="input" placeholder="VIN">
-				</div>
-				<div class="input-row">
-					<input type="text" class="input" placeholder="Год выпуска">
-				</div>
-				<div class="input-row">
-					<input type="text" class="input" placeholder="VIN">
-				</div>
-				<div class="input-row">
-					<input type="text" class="input" placeholder="Объем">
-				</div>
-				<div class="input-row">
-					<input type="text" class="input" placeholder="Мощность и Л.С.">
-				</div>
-				<div class="input-row">
-					<textarea name="text" id="text" placeholder="Ваш вопрос"></textarea>
-				</div>
-				<div class="popup__submit">
-					<button type="submit" class="btn">Отправить заявку</button>
-				</div>
-				<ul class="checkboxes-list">
-					<li class="checkboxes-list__item checkboxes-list__item--mod">
-						<label class="checkbox">
-							<input type="checkbox" class="checkbox__check">
-							<span class="checkbox__icon"></span>
-							<span class="checkbox__inner">
-								<span class="checkbox__text">Нажимая "Отправить", я принимаю условия обработки персональных данных</span>
-							</span>
-						</label>
-					</li>
-					<li class="checkboxes-list__item checkboxes-list__item--mod">
-						<label class="checkbox">
-							<input type="checkbox" class="checkbox__check" checked="">
-							<span class="checkbox__icon"></span>
-							<span class="checkbox__inner">
-								<span class="checkbox__text">Я ознакомлен с <a href="#" class="btn-border">Политикой конфиденциальности</a></span>
-							</span>
-						</label>
-					</li>
-				</ul>
-			</form>
-		</div>
-	</div>
-</div>
-<!-- POPUP PICK END -->
-<!-- POPUP VIDEO-->
-<div class="popup" id="popup-video">
-	<div class="popup-holder">
-		<div class="popup-video">
-			<iframe class="popup-video__video" src="https://www.youtube.com/embed/D3LpQkOpD20" frameborder="0" allowfullscreen width="854" height="480"></iframe>
-		</div>
-	</div>
-</div>
-<!-- POPUP VIDEO END -->
-<!-- POPUP END -->
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
-
-
-    
-    	<script src="pages-list.js"></script>
-    
-
-    
+  <div style="height: 0; width: 0; position: absolute;overflow: hidden;" id="svg-sprite-container">
+  </div>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__top js-header-fixed">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__logo">
+              <a href="#" class="logo">
+                <svg class="icon-logo logo__icon">
+                  <use xlink:href="#logo"></use>
+                </svg>
+                <span class="logo__text">Автоцентр Киевский</span>
+              </a>
+            </div>
+            <div class="header__cell header__cell--menu js-equal-height">
+              <ul class="nav nav--mod">
+                <li class="nav__item">
+                  <div class="nav__holder js-acc-item">
+                    <span class="nav__text arrow arrow--mod js-acc-trigger">Наши услуги </span>
+                    <ul class="nav__drop js-equal-height js-acc-content js-acc-sub">
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт подвески</a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт тормозной системы</a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт двигателя</a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт выхлопной системы </a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт коробки передач</a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт и заправка кондиционера </a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт автоэлектрики</a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Дополнительное оборудование</a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Развал схождение</a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт карданного вала </a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav__drop-item js-acc-sub-item">
+                        <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Замена жидкостей</a>
+                        <ul class="nav__sub js-equal-height js-acc-sub-content">
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                          </li>
+                          <li class="nav__sub-item">
+                            <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="header__cell header__cell--contact js-equal-height">
+              <div class="contact-item">
+                <span class="contact-item__image">
+              <svg class="icon-loc">
+                <use xlink:href="#loc"></use>
+              </svg>
+            </span>
+                <span class="contact-item__content">г.&nbsp;Калининград, ул.&nbsp;Киевская&nbsp;237</span>
+              </div>
+            </div>
+            <div class="header__cell header__cell--time js-equal-height">
+              <div class="contact-item">
+                <span class="contact-item__image">
+              <svg class="icon-clock">
+                <use xlink:href="#clock"></use>
+              </svg>
+            </span>
+                <span class="contact-item__content">Часы работы:  09:00&nbsp;-&nbsp;21:00
+            <span class="contact-item__content--red">Без выходных</span></span>
+              </div>
+            </div>
+            <div class="header__cell header__cell--tel js-equal-height">
+              <div class="contact-item">
+                <span class="contact-item__image">
+              <svg class="icon-tel">
+                <use xlink:href="#tel"></use>
+              </svg>
+            </span>
+                <span class="contact-item__content">
+              <a href="tel:+ 74012999999" class="contact-item__link">+&nbsp;7&nbsp;(4012)&nbsp;999&nbsp;999</a>
+            </span>
+              </div>
+            </div>
+          </div>
+          <div class="header__button">
+            <a href="#" data-src="#popup-appointment" class="btn btn--image" data-fancybox>
+              <span class="btn__image">
+            <svg class="icon-pencil">
+              <use xlink:href="#pencil"></use>
+            </svg>
+          </span>
+              <span class="btn__text">Записаться на ремонт</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="header__content">
+            <div class="header__nav">
+              <div class="nav-mob js-nav">
+                <div class="nav-mob__trigger js-nav-trigger">
+                  <span class="nav-mob__trigger-inner"></span>
+                </div>
+                <div class="nav-mob__holder js-nav-holder">
+                  <div class="nav-mob__inner">
+                    <ul class="nav js-flex js-acc">
+                      <li class="nav__item">
+                        <div class="nav__holder js-acc-item">
+                          <span class="nav__text arrow arrow--mod js-acc-trigger">Услуги </span>
+                          <ul class="nav__drop js-equal-height js-acc-content js-acc-sub">
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт подвески</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт тормозной системы</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт двигателя</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт выхлопной системы </a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт коробки передач</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт и заправка кондиционера </a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт автоэлектрики</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Дополнительное оборудование</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Развал схождение</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт карданного вала </a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Замена жидкостей</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav__item">
+                        <div class="nav__holder js-acc-item">
+                          <span class="nav__text arrow arrow--mod js-acc-trigger">Ремонт микроавтобусов </span>
+                          <ul class="nav__drop js-equal-height js-acc-content js-acc-sub">
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт подвески</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт тормозной системы</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="nav__drop-item js-acc-sub-item">
+                              <a href="#" class="nav__drop-link arrow js-acc-sub-trigger">Ремонт двигателя</a>
+                              <ul class="nav__sub js-equal-height js-acc-sub-content">
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт и заправка кондиционера </a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт автоэлектрики</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Дополнительное оборудование</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Развал схождение</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт карданного вала</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Замена жидкостей</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт подвески</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт тормозной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт двигателя</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт выхлопной системы</a>
+                                </li>
+                                <li class="nav__sub-item">
+                                  <a href="#" class="nav__sub-link arrow">Ремонт коробки передач</a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="nav__item">
+                        <div class="nav__holder js-acc-item">
+                          <a href="#" class="nav__text"> Автозапчасти</a>
+                        </div>
+                      </li>
+                      <li class="nav__item">
+                        <div class="nav__holder js-acc-item">
+                          <a href="#" class="nav__text"> Акции</a>
+                        </div>
+                      </li>
+                      <li class="nav__item">
+                        <div class="nav__holder js-acc-item">
+                          <a href="#" class="nav__text"> Об автосервисе</a>
+                        </div>
+                      </li>
+                      <li class="nav__item">
+                        <div class="nav__holder js-acc-item">
+                          <a href="#" class="nav__text"> Цены</a>
+                        </div>
+                      </li>
+                      <li class="nav__item">
+                        <div class="nav__holder js-acc-item">
+                          <a href="#" class="nav__text"> Новости</a>
+                        </div>
+                      </li>
+                      <li class="nav__item">
+                        <div class="nav__holder js-acc-item">
+                          <a href="#" class="nav__text"> Контакты</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__button">
+            <a href="#" class="btn btn--image btn--border" data-src="#popup-pick" data-fancybox>
+              <span class="btn__image">
+            <svg class="icon-car">
+              <use xlink:href="#car"></use>
+            </svg>
+          </span>
+              <span class="btn__text">Подобрать автозапчасть</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="content content--mod">
+      <div class="prices">
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item arrow">
+              <a href="#" class="breadcrumbs__inner">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__inner breadcrumbs__inner--last">Диагностика</span>
+            </li>
+          </ul>
+          <h1 class="container__title container__title--mod">ЦЕНЫ</h1>
+          <span class="container__title container__title--sm">на наши услуги</span>
+          <ul class="nav-block">
+            <li class="nav-block__item">
+              <a href="#link1" class="nav-block__link js-link nav-block__link--active">Ремонт подвески</a>
+            </li>
+            <li class="nav-block__item">
+              <a href="#link3" class="nav-block__link js-link ">Ремонт тормозной системы</a>
+            </li>
+            <li class="nav-block__item">
+              <a href="#link2" class="nav-block__link js-link ">Ремонт двигателя</a>
+            </li>
+            <li class="nav-block__item">
+              <a href="#link4" class="nav-block__link js-link ">Ремонт выхлопной системы</a>
+            </li>
+            <li class="nav-block__item">
+              <a href=" " class="nav-block__link js-link ">Ремонт коробки передач</a>
+            </li>
+            <li class="nav-block__item">
+              <a href=" " class="nav-block__link js-link ">Диагностика и ремонт топливной системы</a>
+            </li>
+            <li class="nav-block__item">
+              <a href=" " class="nav-block__link js-link ">Ремонт автоэлектрики</a>
+            </li>
+            <li class="nav-block__item">
+              <a href=" " class="nav-block__link js-link ">Дополнительное оборудование</a>
+            </li>
+            <li class="nav-block__item">
+              <a href=" " class="nav-block__link js-link ">Развал схождение</a>
+            </li>
+            <li class="nav-block__item">
+              <a href=" " class="nav-block__link js-link ">Ремонт и заправка кондиционера</a>
+            </li>
+            <li class="nav-block__item">
+              <a href=" " class="nav-block__link js-link ">Замена жидкостей</a>
+            </li>
+            <li class="nav-block__item">
+              <a href=" " class="nav-block__link js-link ">Техническое обслуживание</a>
+            </li>
+          </ul>
+          <p class="prices__info">Каждый автовладелец знает, что для безотказной работы транспортного средства необходимо позаботиться о своевременной профилактике всех технических узлов. Особенно это касается тех автолюбителей, которым часто приходится ездить в Киев и другие большие города. Ведь поломка на дороге мегаполиса может доставить массу проблем. Долговечность работы двигателя, систем и других агрегатов автомобиля зависит от состояния фильтров, качества смазочных материалов и технических жидкостей. В среднем проходить ТО рекомендуется через каждые 10 тыс. км пробега, так как в нашей стране условия эксплуатации автомобиля считаются достаточно тяжелыми. Многие водители, которые не придерживаются этого правила, сталкиваются с ситуацией, когда автомобилю срочно необходим ремонт. Вряд ли в спешке вы сможете найти хороший автосервис.</p>
+        </div>
+        <div class="contact-block contact-block--mod" style="background-image: url('pic/bg/bg-contact.png');">
+          <div class="container">
+            <div class="contact-block__wrapper">
+              <div class="contact-block__telephone">
+                <span class="contact-block__telephone-inner">Запишитесь по телефону </span>
+                <a href="tel:+74012999999" class="contact-block__telephone-inner contact-block__telephone-inner--link">+ 7 (4012) 999 999 </a>
+                <span class="contact-block__telephone-inner contact-block__telephone-inner--yellow"> или </span>
+                <span class="contact-block__telephone-inner"> оставьте он-лайн заявку</span>
+              </div>
+              <div class="contact-block__button">
+                <a href="#" class="btn" data-src="#popup-appointment" data-fancybox>Записаться он-лайн</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="price-table-list">
+          <div class="price-table-list__row">
+            <div class="price-table-list__column">
+              <div class="price-table" id="link1">
+                <div class="price-table__head">Ремонт подвески</div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Чистка инжектора</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">990 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замер компрессии двигателя (за 1 цилиндр)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 560 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замена охлаждающей жидкости (антефриза)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">2 500 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Жидкость ГУР</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 200 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя 8клапанов (4 цилиндра)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 850 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя 16клапанов (4 цилиндра)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">7 500 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя (6 цилиндров)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">9 500 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя (8 цилиндров)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">11 500 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замена комплекта сцепления</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 000 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замена рабочего цилиндра сцепления</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 000 руб</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="price-table" id="link2">
+                <div class="price-table__head">Ремонт двигателя </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Чистка инжектора</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">990 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замер компрессии двигателя (за 1 цилиндр)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 560 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замена охлаждающей жидкости (антефриза)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">2 500 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Жидкость ГУР</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 200 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя 8клапанов (4 цилиндра)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 850 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя 16клапанов (4 цилиндра)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">7 500 руб</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="price-table-list__column">
+              <div class="price-table" id="link3">
+                <div class="price-table__head">Ремонт тормозной системы</div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Чистка инжектора</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">990 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замер компрессии двигателя (за 1 цилиндр)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 560 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замена охлаждающей жидкости (антефриза)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">2 500 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Жидкость ГУР</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 200 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя 8клапанов (4 цилиндра)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 850 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя 16клапанов (4 цилиндра)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">7 500 руб</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="price-table" id="link4">
+                <div class="price-table__head">Ремонт выхлопной системы </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Чистка инжектора</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">990 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замер компрессии двигателя (за 1 цилиндр)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 560 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замена охлаждающей жидкости (антефриза)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">2 500 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Жидкость ГУР</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 200 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя 8клапанов (4 цилиндра)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 850 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя 16клапанов (4 цилиндра)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">7 500 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя (6 цилиндров)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">9 500 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Капитальный ремонт двигателя (8 цилиндров)</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">11 500 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замена комплекта сцепления</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 000 руб</span></span>
+                  </div>
+                </div>
+                <div class="price-table__row">
+                  <div class="price-table__cell price-table__cell--left">
+                    <span class="price-table__inner">Замена рабочего цилиндра сцепления</span>
+                  </div>
+                  <div class="price-table__cell price-table__cell--right">
+                    <span class="price-table__inner">от <span class="price-table__price">1 000 руб</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="prices__info prices__info--mod">За более подробной информацией обращайтеся в нашу компанию. Мы прозведем оценку работ и подберем наиболее подходящие комплектующие.</p>
+      </div>
+    </main>
+    <div class="map">
+      <div class="map__holder" id="js-map"></div>
+      <div class="container">
+        <div class="map__box">
+          <div class="map__title container__subtitle">Как до нас добраться</div>
+          <img src="pic/photo-02.png" alt="Picture" class="map__image">
+          <div class="map__button">
+            <a href="#" class="btn" data-src="#popup-appointment" data-fancybox>Записаться он-лайн</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="brand-slider-holder">
+      <div class="container">
+        <div class="brand-slider-title container__subtitle">Ремонт автомобилей</div>
+        <div class="brand-slider-subtitle">всех ведущих мировых производителей с 1997 года</div>
+        <div class="brand-slider js-brand-slider is-loading">
+          <div class="brand-slider__item">
+            <a href="#" class="brand-slider__link">
+              <img src="pic/brand-slider/photo-01.png" alt="Picture" class="brand-slider__image">
+            </a>
+          </div>
+          <div class="brand-slider__item">
+            <a href="#" class="brand-slider__link">
+              <img src="pic/brand-slider/photo-02.png" alt="Picture" class="brand-slider__image">
+            </a>
+          </div>
+          <div class="brand-slider__item">
+            <a href="#" class="brand-slider__link">
+              <img src="pic/brand-slider/photo-03.png" alt="Picture" class="brand-slider__image">
+            </a>
+          </div>
+          <div class="brand-slider__item">
+            <a href="#" class="brand-slider__link">
+              <img src="pic/brand-slider/photo-04.png" alt="Picture" class="brand-slider__image">
+            </a>
+          </div>
+          <div class="brand-slider__item">
+            <a href="#" class="brand-slider__link">
+              <img src="pic/brand-slider/photo-05.png" alt="Picture" class="brand-slider__image">
+            </a>
+          </div>
+          <div class="brand-slider__item">
+            <a href="#" class="brand-slider__link">
+              <img src="pic/brand-slider/photo-06.png" alt="Picture" class="brand-slider__image">
+            </a>
+          </div>
+          <div class="brand-slider__item">
+            <a href="#" class="brand-slider__link">
+              <img src="pic/brand-slider/photo-01.png" alt="Picture" class="brand-slider__image">
+            </a>
+          </div>
+          <div class="brand-slider__item">
+            <a href="#" class="brand-slider__link">
+              <img src="pic/brand-slider/photo-02.png" alt="Picture" class="brand-slider__image">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer js-footer">
+    <div class="footer__wrapper" style="background-image: url('pic/bg/bg-footer.png');">
+      <div class="footer__center">
+        <div class="container">
+          <div class="footer__cell footer__cell--left js-acc-mod">
+            <div class="footer__box js-acc-mod-item">
+              <div class="footer__title container__subtitle js-acc-mod-trigger arrow">Услуги</div>
+              <div class="footer__list js-acc-mod-content">
+                <ul class="simple-list">
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Ремонт подвески </a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Ремонт тормозной системы</a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Ремонт двигателя </a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Ремонт выхлопной системы </a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Ремонт коробки передач</a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Ремонт и заправка кондиционера</a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Ремонт автоэлектрики </a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Дополнительное оборудование</a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Развал схождение</a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Ремонт карданного вала </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__box js-acc-mod-item">
+              <div class="footer__title container__subtitle js-acc-mod-trigger arrow">Об автосервисе</div>
+              <div class="footer__list js-acc-mod-content">
+                <ul class="simple-list">
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Акции</a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Контакты</a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Об автосервисе</a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Новости</a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link">Цены</a>
+                  </li>
+                  <li class="simple-list__item">
+                    <a href="#" class="simple-list__link simple-list__link--mod">Автозапчасти</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__cell footer__cell--right">
+            <div class="footer__box footer__box--left">
+              <ul class="loc-list">
+                <li class="loc-list__item">
+                  <span class="loc-list__image">
+                  <svg class="icon-loc loc-list__icon">
+                    <use xlink:href="#loc"></use>
+                  </svg>
+                </span>
+                  <span class="loc-list__content">
+                  <span class="loc-list__content-inner">г. Калининград, ул. Киевская</span>
+                  </span>
+                </li>
+                <li class="loc-list__item">
+                  <span class="loc-list__image">
+                  <svg class="icon-tel loc-list__icon">
+                    <use xlink:href="#tel"></use>
+                  </svg>
+                </span>
+                  <span class="loc-list__content">
+                  <a href="tel:+74012999999" class="loc-list__content-inner loc-list__content-inner--link">+ 7 (4012) 999 999</a>
+                </span>
+                </li>
+                <li class="loc-list__item">
+                  <span class="loc-list__image">
+                  <svg class="icon-clock loc-list__icon">
+                    <use xlink:href="#clock"></use>
+                  </svg>
+                </span>
+                  <span class="loc-list__content">
+                  <span class="loc-list__content-inner">Часы работы:  09:00&nbsp;-&nbsp;21:00 <span class="loc-list__content-inner--mod">Без выходных</span></span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__box footer__box--right">
+              <div class="footer__logo">
+                <a href="" class="logo logo--lg">
+                  <svg class="icon-logo logo__icon">
+                    <use xlink:href="#logo"></use>
+                  </svg>
+                  <span class="logo__text">Автоцентр Киевский</span>
+                </a>
+              </div>
+              <div class="footer__button">
+                <a href="#" class="btn btn--sm" data-src="#popup-appointment" data-fancybox>Записаться на ремонт</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__copy">Все права защищены. Перепечатка информации возможна только при наличии согласия администрации и активной ссылки на источник.</div>
+          <div class="footer__site">
+            <a href="#" class="footer__site-link">Мультисайт</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- POPUP -->
+  <!-- POPUP APPOINTMENT-->
+  <div class="popup" id="popup-appointment">
+    <div class="popup-holder">
+      <div class="popup-appointment">
+        <div class="popup__title container__subtitle">Запишитесь на осмотр</div>
+        <div class="popup__info">Мы свяжемся с Вами в ближайше время!
+          <br>График работы без выходных и праздничных дней с 09:00 - 21:00</div>
+        <form action="#" class="popup__form">
+          <div class="input-hold input-row">
+            <input type="text" class="input input-hold__input" placeholder="Ваше имя">
+            <span class="input-hold__image">
+            <svg class="icon-user input-hold__icon">
+              <use xlink:href="#user"></use>
+            </svg>
+          </span>
+          </div>
+          <div class="input-hold input-row">
+            <input type="tel" class="input input-hold__input" placeholder="Ваш телефон">
+            <span class="input-hold__image">
+            <svg class="icon-phone input-hold__icon">
+              <use xlink:href="#phone"></use>
+            </svg>
+          </span>
+          </div>
+          <div class="input-hold input-row">
+            <textarea name="text" id="text" placeholder="Ваше сообщение"></textarea>
+            <span class="input-hold__image">
+            <svg class="icon-message input-hold__icon">
+              <use xlink:href="#message"></use>
+            </svg>
+          </span>
+          </div>
+          <div class="popup__submit">
+            <button type="submit" class="btn">Отправить заявку</button>
+          </div>
+          <ul class="checkboxes-list">
+            <li class="checkboxes-list__item checkboxes-list__item--mod">
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox__check" checked="">
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__inner">
+                <span class="checkbox__text">Нажимая "Отправить", я принимаю условия обработки персональных данных</span>
+                </span>
+              </label>
+            </li>
+            <li class="checkboxes-list__item checkboxes-list__item--mod">
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox__check" checked="">
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__inner">
+                <span class="checkbox__text">Я ознакомлен с <a href="#" class="btn-border">Политикой конфиденциальности</a></span>
+                </span>
+              </label>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- POPUP APPOINTMENT END -->
+  <!-- POPUP PICK-->
+  <div class="popup" id="popup-pick">
+    <div class="popup-holder">
+      <div class="popup-appointment">
+        <div class="popup__title container__subtitle">Мы оперативно подберем</div>
+        <div class="popup__info">нужные запчасти для Вашего авто</div>
+        <form action="#" class="popup__form">
+          <div class="input-row">
+            <input type="text" class="input" placeholder="Ваше имя">
+          </div>
+          <div class="input-row">
+            <input type="tel" class="input" placeholder="Ваш телефон">
+          </div>
+          <div class="input-row">
+            <input type="text" class="input" placeholder="Марка автомобиля">
+          </div>
+          <div class="input-row">
+            <input type="text" class="input" placeholder="VIN">
+          </div>
+          <div class="input-row">
+            <input type="text" class="input" placeholder="Год выпуска">
+          </div>
+          <div class="input-row">
+            <input type="text" class="input" placeholder="VIN">
+          </div>
+          <div class="input-row">
+            <input type="text" class="input" placeholder="Объем">
+          </div>
+          <div class="input-row">
+            <input type="text" class="input" placeholder="Мощность и Л.С.">
+          </div>
+          <div class="input-row">
+            <textarea name="text" id="text" placeholder="Ваш вопрос"></textarea>
+          </div>
+          <div class="popup__submit">
+            <button type="submit" class="btn">Отправить заявку</button>
+          </div>
+          <ul class="checkboxes-list">
+            <li class="checkboxes-list__item checkboxes-list__item--mod">
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox__check">
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__inner">
+                <span class="checkbox__text">Нажимая "Отправить", я принимаю условия обработки персональных данных</span>
+                </span>
+              </label>
+            </li>
+            <li class="checkboxes-list__item checkboxes-list__item--mod">
+              <label class="checkbox">
+                <input type="checkbox" class="checkbox__check" checked="">
+                <span class="checkbox__icon"></span>
+                <span class="checkbox__inner">
+                <span class="checkbox__text">Я ознакомлен с <a href="#" class="btn-border">Политикой конфиденциальности</a></span>
+                </span>
+              </label>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- POPUP PICK END -->
+  <!-- POPUP VIDEO-->
+  <div class="popup" id="popup-video">
+    <div class="popup-holder">
+      <div class="popup-video">
+        <iframe class="popup-video__video" src="https://www.youtube.com/embed/D3LpQkOpD20" frameborder="0" allowfullscreen width="854" height="480"></iframe>
+      </div>
+    </div>
+  </div>
+  <!-- POPUP VIDEO END -->
+  <!-- POPUP END -->
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+  <script src="pages-list.js"></script>
 </body>
+
 </html>
-
-

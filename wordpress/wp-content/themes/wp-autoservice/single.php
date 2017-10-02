@@ -1,34 +1,49 @@
 <?php get_header(); ?>
 
   <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-      <h1 class="single-title inner-title"><?php the_title(); ?></h1>
-      <?php if ( has_post_thumbnail()) :?>
-        <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-          <?php the_post_thumbnail(); // Fullsize image for the single post ?>
-        </a>
-      <?php endif; ?><!-- /post thumbnail -->
+    <main  id="post-<?php the_ID(); ?>" <?php post_class(' content'); ?>>
+      <div class="container">
+        <?php easy_breadcrumbs(); ?>
+        <div class="static-content">
+          <h1 class="section__title"><?php the_title(); ?></h1><?php edit_post_link(); ?>
+          <?php the_content(); ?>
+        </div>
+      </div>
 
-      <span class="date"><?php the_time('d F Y'); ?> <?php the_time('H:i'); ?></span>
-      <span class="author"><?php _e( 'Published by', 'wpeasy' ); ?> <?php the_author_posts_link(); ?></span>
-      <span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'wpeasy' ), __( '1 Comment', 'wpeasy' ), __( '% Comments', 'wpeasy' )); ?></span><!-- /post details -->
+<?php if( have_rows('service_price') ): ?>
 
-      <?php the_content(); ?>
+  <div class="container">
+    <div class="price-table-list">
+      <div class="container__title container__title--mod">Прайс</div>
+      <div class="container__title container__title--sm">наших услуг</div>
+      <div class="price-table-list__row">
+        <div class="price-table-list__column">
+          <div class="price-table" id=" ">
+            <?php while ( have_rows('service_price') ) : the_row(); ?>
 
-      <?php the_tags( __( 'Tags: ', 'wpeasy' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+              <div class="price-table__row">
+                <div class="price-table__cell price-table__cell--left">
+                  <span class="price-table__inner"><?php the_sub_field('title'); ?></span>
+                </div>
+                <div class="price-table__cell price-table__cell--right">
+                  <span class="price-table__inner"><?php the_sub_field('before_price'); ?> <span class="price-table__price"><?php the_sub_field('sub_price'); ?></span></span>
+                </div>
+              </div>
+            <?php  endwhile; ?>
 
-      <p><?php _e( 'Categorised in: ', 'wpeasy' ); the_category(', '); // Separated by commas ?></p>
+          </div>
+          <div class="price-table-list__info">За полее подробной информацией обращайтеся в нашу компанию.
+            <br>Мы прозведем оценку работ и подберем наиболее подходящие комплектующие.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
 
-      <p><?php _e( 'This post was written by ', 'wpeasy' ); the_author(); ?></p>
+    </main>
 
-      <?php edit_post_link(); ?>
 
-      <?php comments_template(); ?>
-
-    </article>
-  <?php endwhile; endif; ?>
-
-  <?php get_sidebar(); ?>
+  <?php  endwhile;  endif; ?>
 
 <?php get_footer(); ?>

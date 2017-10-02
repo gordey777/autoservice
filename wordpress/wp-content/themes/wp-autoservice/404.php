@@ -17,7 +17,7 @@
               <use xlink:href="#not-found"></use>
             </svg>
           </div>
-          <div class="not-found__subtitle">страница не найдена <?php _e( 'Page not found', 'wpeasy' ); ?></div>
+          <div class="not-found__subtitle"><?php _e( 'Page not found', 'wpeasy' ); ?></div>
           <div class="not-found__button">
             <a href="<?php echo home_url(); ?>" class="not-found__link">
               <span class="not-found__link-image">

@@ -4,7 +4,7 @@
 
       <?php //edit_post_link(); ?>
 
-    <main  id="post-<?php the_ID(); ?>" <?php post_class('content content--mod'); ?>>
+    <main  id="post-<?php the_ID(); ?>" <?php post_class(' content content--mod'); ?>>
       <div class="container">
         <?php easy_breadcrumbs(); ?>
         <h1 class="container__title"><?php the_title(); ?></h1>
@@ -13,12 +13,6 @@
         <div class="container">
           <div class="contact-block__holder">
             <?php if( have_rows('contacts_adress') ): ?>
-
-
-
-
-
-
               <div class="contact-block__cell contact-block__cell--left">
                 <div class="contact-block__inner">
                   <div class="contact-block__box">
@@ -55,8 +49,6 @@
 
             <div class="contact-block__cell contact-block__cell--right">
               <?php echo do_shortcode('[contact-form-7 id="36" title="Контактная форма Контакты"]'); ?>
-
-
             </div>
           </div>
         </div>
