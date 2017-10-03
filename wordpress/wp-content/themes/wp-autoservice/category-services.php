@@ -7,7 +7,10 @@
         <h1 class="container__title"><?php if( is_category() ) echo get_queried_object()->name; ?></h1>
         <div class="service-list">
 
-<?php $child_args = array('child_of' => $cat__ID); ?>
+<?php $child_args = array(
+  'child_of' => $cat__ID,
+  'post_per_page' => -1,
+  ); ?>
         <?php $child_categories = get_categories($child_args); ?>
 
         <?php foreach($child_categories as $category) : ?>
@@ -33,7 +36,7 @@
 
 
         </div>
-        <?php get_template_part('pagination'); ?>
+        <?php //get_template_part('pagination'); ?>
       </div>
     </main>
 

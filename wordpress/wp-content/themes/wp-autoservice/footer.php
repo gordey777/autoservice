@@ -1,3 +1,29 @@
+
+  <?php $map = true; ?>
+  <?php $brands = true; ?>
+
+<?php if(is_category()) { ?>
+
+  <?php $cat__ID = get_queried_object()->cat_ID; ?>
+  <?php $field_term = 'category_' . $cat__ID; ?>
+  <?php $cat_type = get_field('category_type', $field_term); ?>
+
+
+  <?php
+ if (($cat_type['value'] === 'news')) {
+
+    $map = false;
+    $brands = false;
+
+  }
+
+
+
+  }
+  ?>
+
+
+    <?php if ( $map ) : ?>
     <div class="map">
       <div class="map__holder" id="js-map" data-baloon="pic/location.png" data-content="адресок"></div>
       <div class="container">
@@ -10,57 +36,28 @@
         </div>
       </div>
     </div>
+    <?php endif // end if have_rows ?>
 
-
-        <div class="brand-slider-holder">
-          <div class="container">
-            <div class="brand-slider-title container__subtitle">Ремонт автомобилей</div>
-            <div class="brand-slider-subtitle">всех ведущих мировых производителей с 1997 года</div>
-            <div class="brand-slider js-brand-slider is-loading">
-              <div class="brand-slider__item">
-                <a href="#" class="brand-slider__link">
-                  <img src="pic/brand-slider/photo-01.png" alt="Picture" class="brand-slider__image">
-                </a>
-              </div>
-              <div class="brand-slider__item">
-                <a href="#" class="brand-slider__link">
-                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-02.png" alt="Picture" class="brand-slider__image">
-                </a>
-              </div>
-              <div class="brand-slider__item">
-                <a href="#" class="brand-slider__link">
-                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-03.png" alt="Picture" class="brand-slider__image">
-                </a>
-              </div>
-              <div class="brand-slider__item">
-                <a href="#" class="brand-slider__link">
-                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-04.png" alt="Picture" class="brand-slider__image">
-                </a>
-              </div>
-              <div class="brand-slider__item">
-                <a href="#" class="brand-slider__link">
-                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-05.png" alt="Picture" class="brand-slider__image">
-                </a>
-              </div>
-              <div class="brand-slider__item">
-                <a href="#" class="brand-slider__link">
-                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-06.png" alt="Picture" class="brand-slider__image">
-                </a>
-              </div>
-              <div class="brand-slider__item">
-                <a href="#" class="brand-slider__link">
-                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-01.png" alt="Picture" class="brand-slider__image">
-                </a>
-              </div>
-              <div class="brand-slider__item">
-                <a href="#" class="brand-slider__link">
-                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-02.png" alt="Picture" class="brand-slider__image">
-                </a>
-              </div>
-            </div>
+    <?php if ( !is_front_page() && !is_home() && $brands && have_rows('brands_slider', 37)) : ?>
+      <div class="brand-slider-holder">
+        <div class="container">
+          <div class="brand-slider-title container__subtitle">Ремонт автомобилей</div>
+          <div class="brand-slider-subtitle">всех ведущих мировых производителей с 1997 года</div>
+          <div class="brand-slider js-brand-slider is-loading">
+            <?php while ( have_rows('brands_slider', 37) ) : the_row(); ?>
+              <?php $image = get_sub_field('img'); ?>
+              <?php if ( !empty($image)) : ?>
+                <div class="brand-slider__item">
+                  <a href="<?php the_sub_field('link'); ?>" class="brand-slider__link">
+                    <img src="<?php echo $image['url']; ?>" alt="Picture" class="brand-slider__image">
+                  </a>
+                </div>
+              <?php endif; ?>
+            <?php endwhile; ?>
           </div>
         </div>
-
+      </div>
+    <?php endif // end if have_rows ?>
 
   </div><!-- wrapper -->
 

@@ -137,7 +137,7 @@
 
                 <div class="about__cell">
                   <div class="about__inner js-equal-height">
-                    <div class="about__title">Ремонт автомобилей <?php echo (8 % 2)."\n"; ?></div>
+                    <div class="about__title">Ремонт автомобилей</div>
                     <div class="about__subtitle">Ведущих мировых производителей</div>
                     <div class="brand-slider brand-slider--mod js-brand-slider-mod is-loading">
 
