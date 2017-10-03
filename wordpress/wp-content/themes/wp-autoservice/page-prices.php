@@ -35,7 +35,7 @@
           </ul>
           <?php the_content(); ?>
         </div>
-        <div class="contact-block contact-block--mod" style="background-image: url('<?php echo get_template_directory_uri();?>pic/bg/bg-contact.png');">
+        <div class="contact-block contact-block--mod" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/bg/bg-contact.png');">
           <div class="container">
             <div class="contact-block__wrapper">
               <div class="contact-block__telephone">

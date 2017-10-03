@@ -33,33 +33,10 @@
           </ul>
 
           <div class="static-content">
-            <p>Каждый автовладелец знает, что для безотказной работы транспортного средства необходимо позаботиться о своевременной профилактике всех технических узлов. Особенно это касается тех автолюбителей, которым часто приходится ездить в Киев и другие большие города. Ведь поломка на дороге мегаполиса может доставить массу проблем. Долговечность работы двигателя, систем и других агрегатов автомобиля зависит от состояния фильтров, качества смазочных материалов и технических жидкостей. В среднем проходить ТО рекомендуется через каждые 10 тыс. км пробега, так как в нашей стране условия эксплуатации автомобиля считаются достаточно тяжелыми. Многие водители, которые не придерживаются этого правила, сталкиваются с ситуацией, когда автомобилю срочно необходим ремонт. Вряд ли в спешке вы сможете найти хороший автосервис.</p>
-            <p>Наш автосервис производит ремонт ходовой, ремонт/капремонт двигателя, шиномонтаж, ремонт бамперов. Особое внимание стоит уделить проводке автомобиля, ведь именно она достаточно часто становится причиной пожара. При необходимости вашего "железного коня" осмотрит наш высококвалифицированный автоэлектрик.</p>
-          </div>
-        </div>
-        <div class="contact-block contact-block--mod" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/bg/bg-contact.png');">
-          <div class="container">
-            <div class="contact-block__wrapper">
-              <div class="contact-block__telephone">
-                <span class="contact-block__telephone-inner">Запишитесь по телефону </span>
-                <a href="tel:+74012999999" class="contact-block__telephone-inner contact-block__telephone-inner--link">+ 7 (4012) 999 999 </a>
-                <span class="contact-block__telephone-inner contact-block__telephone-inner--yellow"> или </span>
-                <span class="contact-block__telephone-inner"> оставьте он-лайн заявку</span>
-              </div>
-              <div class="contact-block__button">
-                <a href="#" class="btn" data-src="#popup-appointment" data-fancybox>Записаться он-лайн</a>
-              </div>
-            </div>
+<?php the_field('cat_content', $field_term); ?>
           </div>
         </div>
 
-        <div class="container">
-          <div class="holder static-content prices__holder">
-            <div class="holder__wrap">
-                <?php the_field('cat_content', $field_term); ?>
-            </div>
-          </div>
-        </div>
 
 
         <div class="benefits bg-red-dotted">

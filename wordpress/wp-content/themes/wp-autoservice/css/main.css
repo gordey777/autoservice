@@ -469,7 +469,7 @@ template {
   line-height: 0; }
 
 button__text,
-.btn__text, .checkboxes-list__item, .checkboxes-inline-list__item, .radioboxes-list__item, .radioboxes-inline-list__item, .advantages__item, .benefits-list__item, .breadcrumbs__inner, .contact-block__button, .contact-block__cell, .contact-block__column, .footer__box, .footer__copy, .footer__site, .loc-list__content, .header__button, .header__logo, .contact-item__content, .intro__slider, .intro__banner, .nav-block__item, .nav .flexMenu-viewMore, .nav__item, .nav .flexMenu-viewMore a, .nav__text, .news-list .news__item, .pagination__item, .price-table-list__column, .price-table__cell, .service-list .service__item, .vantages__cell, .vantages-list__inner, .about__cell, .not-found__link-image, .not-found__link-text {
+.btn__text, .checkboxes-list__item, .checkboxes-inline-list__item, .radioboxes-list__item, .radioboxes-inline-list__item, .advantages__item, .benefits-list__item, .item-cat a, .breadcrumbs__inner, .contact-block__button, .contact-block__cell, .contact-block__column, .footer__box, .footer__copy, .footer__site, .loc-list__content, .header__button, .header__logo, .contact-item__content, .intro__slider, .intro__banner, .nav-block__item, .nav .flexMenu-viewMore, .nav__item, .nav .flexMenu-viewMore a, .nav__text, .news-list .news__item, .pagination__item, .price-table-list__column, .price-table__cell, .service-list .service__item, .vantages__cell, .vantages-list__inner, .about__cell, .not-found__link-image, .not-found__link-text {
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: normal; }
@@ -3528,6 +3528,7 @@ select {
       margin: 4px 8px 0 3px;
       border-color: #ee1c1f;
       border-width: 1px; }
+  .breadcrumbs .item-cat a,
   .breadcrumbs__inner {
     display: inline-block;
     vertical-align: top;

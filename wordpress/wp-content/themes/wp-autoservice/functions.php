@@ -536,10 +536,10 @@ function easy_breadcrumbs() {
                 $get_parents_name = $last_category->cat_name;
                $cat_display = '';
                  foreach($cat_parents as $parents) {
-                    /*$cat_display .= '<li class="breadcrumbs__item arrow item-cat">'.$parents.'</li>';
+                    $cat_display .= '<li class="breadcrumbs__item arrow item-cat">'.$parents.'</li>';
 
-                    //$cat_display .= '<li class="separator"> ' . $separator . ' </li>';*/
-                    $cat_display .= '<li class="breadcrumbs__item arrow item-cat" ><a class="breadcrumbs__inner bread-cat" href="' . $get_parents_link . '" title="' . $get_parents_name . '">' . $get_parents_name . '</a></li>';
+                    //$cat_display .= '<li class="separator"> ' . $separator . ' </li>';
+                    //$cat_display .= '<li class="breadcrumbs__item arrow item-cat" ><a class="breadcrumbs__inner bread-cat" href="' . $get_parents_link . '" title="' . $get_parents_name . '">' . $get_parents_name . '</a></li>';
                 }
 
             }

@@ -5,7 +5,7 @@
 
   <?php
   if ($cat_type['value'] === 'news') {
-echo $cat_type['value'];
+
     include('category-news.php');
 
   } elseif ($cat_type['value'] === 'services') {
@@ -13,7 +13,7 @@ echo $cat_type['value'];
     include('category-services.php');
 
   } elseif ($cat_type['value'] === 'subservices') {
-echo $cat_type['value'];
+
     include('category-subservices.php');
 
   } else {

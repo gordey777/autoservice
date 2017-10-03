@@ -10,6 +10,58 @@
         </div>
       </div>
     </div>
+
+
+        <div class="brand-slider-holder">
+          <div class="container">
+            <div class="brand-slider-title container__subtitle">Ремонт автомобилей</div>
+            <div class="brand-slider-subtitle">всех ведущих мировых производителей с 1997 года</div>
+            <div class="brand-slider js-brand-slider is-loading">
+              <div class="brand-slider__item">
+                <a href="#" class="brand-slider__link">
+                  <img src="pic/brand-slider/photo-01.png" alt="Picture" class="brand-slider__image">
+                </a>
+              </div>
+              <div class="brand-slider__item">
+                <a href="#" class="brand-slider__link">
+                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-02.png" alt="Picture" class="brand-slider__image">
+                </a>
+              </div>
+              <div class="brand-slider__item">
+                <a href="#" class="brand-slider__link">
+                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-03.png" alt="Picture" class="brand-slider__image">
+                </a>
+              </div>
+              <div class="brand-slider__item">
+                <a href="#" class="brand-slider__link">
+                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-04.png" alt="Picture" class="brand-slider__image">
+                </a>
+              </div>
+              <div class="brand-slider__item">
+                <a href="#" class="brand-slider__link">
+                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-05.png" alt="Picture" class="brand-slider__image">
+                </a>
+              </div>
+              <div class="brand-slider__item">
+                <a href="#" class="brand-slider__link">
+                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-06.png" alt="Picture" class="brand-slider__image">
+                </a>
+              </div>
+              <div class="brand-slider__item">
+                <a href="#" class="brand-slider__link">
+                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-01.png" alt="Picture" class="brand-slider__image">
+                </a>
+              </div>
+              <div class="brand-slider__item">
+                <a href="#" class="brand-slider__link">
+                  <img src="<?php echo get_template_directory_uri(); ?>/pic/brand-slider/photo-02.png" alt="Picture" class="brand-slider__image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
   </div><!-- wrapper -->
 
   <footer class="footer js-footer">
