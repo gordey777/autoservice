@@ -49,7 +49,7 @@
           <?php if( have_rows('advantages') ): ?>
            <ul class="advantages">
               <?php while ( have_rows('advantages') ) : the_row(); ?>
-              <?php the_sub_field('title'); ?>
+
               <li class="advantages__item js-equal-height">
                 <div class="advantages__top">
                   <span class="advantages__top-inner">
@@ -83,23 +83,31 @@
         </div>
       </div>
 
-
       <div class="service-hold">
         <div class="container">
-          <div class="container__title container__title--mod red">Наши услуги</div>
-          <div class="container__title container__title--sm black">В вашем распоряжении</div>
+          <div class="container__title container__title--mod red"><?php the_field('services_title'); ?></div>
+          <div class="container__title container__title--sm black"><?php the_field('services_subtitle'); ?></div>
           <div class="service-list">
-
-            <div class="service__item">
-              <a href="#" class="service__link">
-                <div class="service__image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/pic/service/photo-01.png');"></div>
-                <div class="service__title js-equal-height">
-                  <span class="service__title-inner">Ремонт подвески Ремонт подвески Ремонт подвески Ремонт подвески Ремонт подвески Ремонт подвески </span>
-                </div>
-              </a>
-            </div><!-- /.service__item -->
-
-
+            <?php $servises_posts = get_field('services_list'); ?>
+            <?php if( $servises_posts ):  ?>
+              <?php foreach( $servises_posts as $post): ?>
+                  <?php setup_postdata($post); ?>
+                  <div id="post-<?php the_ID(); ?>" <?php post_class('looper service__item'); ?>>
+                    <a  href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="service__link">
+                      <div class="service__image"
+                                        <?php if ( has_post_thumbnail()) { ?>
+                                          style="background-image: url('<?php echo the_post_thumbnail_url('custom-size'); ?>');"
+                                        <?php } else { ?>
+                                          style="background-image: url('<?php echo catchFirstImage(); ?>');"
+                                        <?php } ?> ></div>
+                      <div class="service__title js-equal-height">
+                        <span class="service__title-inner"><?php the_title(); ?></span>
+                      </div>
+                    </a>
+                  </div><!-- /looper -->
+              <?php endforeach; ?>
+              <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
           </div>
         </div>
       </div><!-- /.service-hold -->
@@ -248,7 +256,7 @@
                         <?php if ($i < $i_max ) { ?>
                           <div class="slideshow__cell">
                             <a href="<?php echo  $homeGallery[$i]['url']; ?>" class="slideshow__link" data-fancybox="1">
-                              <div class="slideshow__inner" style="background-image: url('<?php echo $homeGallery[$i]['sizes']['medium']; ?>');"></div>
+                              <div class="slideshow__inner" style="background-image: url('<?php echo $homeGallery[$i]['sizes']['custom-size']; ?>');"></div>
                             </a>
                           </div>
                           <?php $i++; ?>
@@ -256,7 +264,7 @@
                         <?php if ($i < $i_max ) { ?>
                           <div class="slideshow__cell">
                             <a href="<?php echo  $homeGallery[$i]['url']; ?>" class="slideshow__link" data-fancybox="1">
-                              <div class="slideshow__inner" style="background-image: url('<?php echo $homeGallery[$i]['sizes']['medium']; ?>');"></div>
+                              <div class="slideshow__inner" style="background-image: url('<?php echo $homeGallery[$i]['sizes']['custom-size']; ?>');"></div>
                             </a>
                           </div>
                           <?php $i++; ?>

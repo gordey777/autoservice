@@ -38,6 +38,8 @@ function wpeStyles()  {
   wp_dequeue_style('fancybox');
   wp_dequeue_style('wp_dequeue_style');
 
+  wp_register_style('wpeasy-vendor', get_template_directory_uri() . '/css/vendor.css', array(), '1.0', 'all');
+  wp_enqueue_style('wpeasy-vendor'); // Enqueue it!
   wp_register_style('wpeasy-style', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all');
   wp_enqueue_style('wpeasy-style'); // Enqueue it!
 }
@@ -60,6 +62,10 @@ function wpeHeaderScripts() {
     //  Load footer scripts (footer.php)
     // wp_register_script('wpeScripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true);
     // wp_enqueue_script('wpeScripts');
+    wp_register_script('wpeVendor', get_template_directory_uri() . '/js/vendor.js', array(), '1.0.0', true);
+    wp_enqueue_script('wpeVendor');
+    wp_register_script('wpeMain', get_template_directory_uri() . '/js/main.js', array(), '1.0.0', true);
+    wp_enqueue_script('wpeMain');
 
   }
 }
@@ -91,7 +97,7 @@ if (function_exists('add_theme_support')) {
   add_image_size('large', 1200, '', true); // Large Thumbnail
   add_image_size('medium', 600, '', true); // Medium Thumbnail
   add_image_size('small', 250, '', true); // Small Thumbnail
-  add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+  add_image_size('custom-size', 390, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
   // Enables post and comment RSS feed links to head
   add_theme_support('automatic-feed-links');
@@ -141,7 +147,7 @@ function wpeHeadSlickNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="nav js-flex js-acc">%3$s</ul>',
+    'items_wrap'      => '<ul class="nav nav--mod">%3$s</ul>',
     //'items_wrap'      => '%3$s',
     'depth'           => 0,
     //'walker'          => new themeslug_walker_nav_menu
@@ -729,6 +735,8 @@ add_filter('the_content', 'filter_ptags_on_images');
 require_once('walker_bem_menu.php');
 
 
+
+
 //Gallery shortcode
 function insert_gallery() {
 
@@ -745,7 +753,7 @@ function insert_gallery() {
       foreach( $pageGallery as $image ):
           $html = $html . '<div class="gallery__item">';
           $html = $html . '<a href="' . $image['url'] . '" class="gallery__link" data-fancybox="1">';
-          $html = $html . '<img src="' . $image['sizes']['medium'] . '" class="gallery__image">';
+          $html = $html . '<img src="' . $image['sizes']['custom-size'] . '" class="gallery__image">';
           $html = $html . '</a>';
           $html = $html . '</div>';
       endforeach;
@@ -763,6 +771,84 @@ add_shortcode( 'insert_gallery', 'insert_gallery' );
 //[insert_gallery]
 
 
+//Gallery shortcode
+function insert_slideshow() {
+
+    $pageGallery = get_field('page_gallery');
+
+    if( $pageGallery ) {
+      $i_max = count($pageGallery);
+      $n_max = ($i_max / 4) + 1;
+      $i = 0;
+      $k = 0;
+
+
+      $html = ' </div><!-- /.static-content -->
+                  <div class="holder">
+                    <div class="container">
+                      <div class="slideshow js-slideshow">';
+      while ( $k < $n_max ) {
+          if ( $i < $i_max ) {
+
+            $html = $html . '<div class="slideshow__column">
+                                <div class="slideshow__row">';
+
+            if ($i < $i_max ) {
+              $html = $html . '<div class="slideshow__cell">
+                <a href="' . $pageGallery[$i]['url'] . '" class="slideshow__link" data-fancybox="1">
+                  <div class="slideshow__inner" style="background-image: url(' . $pageGallery[$i]['sizes']['custom-size'] . ');"></div>
+                </a>
+              </div>';
+              $i++;
+            }
+            if ($i < $i_max ) {
+              $html = $html . '<div class="slideshow__cell">
+                <a href="' . $pageGallery[$i]['url'] . '" class="slideshow__link" data-fancybox="1">
+                  <div class="slideshow__inner" style="background-image: url(' . $pageGallery[$i]['sizes']['custom-size'] . ');"></div>
+                </a>
+              </div>';
+              $i++;
+            }
+
+            $html = $html . '</div>';
+            if ($i < $i_max ) {
+              $html = $html . '<div class="slideshow__row">
+                                <a href="' . $pageGallery[$i]['url'] . '" class="slideshow__link" data-fancybox="1">
+                                  <div class="slideshow__inner" style="background-image: url(' . $pageGallery[$i]['sizes']['medium'] . ');"></div>
+                                </a>
+                              </div>';
+              $i++;
+            }
+            $html = $html . '</div>';
+
+            if ($i < $i_max ) {
+              $html = $html . '<div class="slideshow__column">
+                                  <a href="' . $pageGallery[$i]['url'] . '" class="slideshow__link" data-fancybox="1">
+                                    <div class="slideshow__inner" style="background-image: url(' . $pageGallery[$i]['sizes']['medium'] . ');"></div>
+                                  </a>
+                                </div>';
+              $i++;
+            }
+
+           }
+          $k++;
+      }
+
+      $html = $html . '</div>
+          </div>
+        </div>
+        <div class="static-content">';
+
+
+
+    }
+          return $html;
+}
+
+add_shortcode( 'insert_slideshow', 'insert_slideshow' );
+//[insert_slideshow]
+
+
 
 //Reg baner shortcode
 function insert_reg_baner() {
@@ -770,12 +856,12 @@ function insert_reg_baner() {
 
 $html = '</div><!-- /.static-content -->
         </div><!-- /.container -->
-        <div class="contact-block contact-block--mod" style="background-image: url(' . get_template_directory_uri() . '/pic/bg/bg-contact.png);">
+        <div class="contact-block contact-block--mod contact-block__shortcode" style="background-image: url(' . get_template_directory_uri() . '/pic/bg/bg-contact.png);">
           <div class="container">
             <div class="contact-block__wrapper">
               <div class="contact-block__telephone">
                 <span class="contact-block__telephone-inner">Запишитесь по телефону </span>
-                <a href="' . get_field('phone', 37) . '" class="contact-block__telephone-inner contact-block__telephone-inner--link">' . get_field('phone', 37) . '</a>
+                <a href="tel:' . preg_replace('/[^0-9]/', '', get_field('phone', 37)) . '" class="contact-block__telephone-inner contact-block__telephone-inner--link">' . get_field('phone', 37) . '</a>
                 <span class="contact-block__telephone-inner contact-block__telephone-inner--yellow"> или </span>
                 <span class="contact-block__telephone-inner"> оставьте он-лайн заявку</span>
               </div>
@@ -794,6 +880,30 @@ $html = '</div><!-- /.static-content -->
 
 add_shortcode( 'insert_reg_baner', 'insert_reg_baner' );
 //[insert_reg_baner]
+
+
+//Reg baner shortcode
+function insert_reg_baner_form() {
+
+  $html = '</div><!-- /.static-content -->
+          </div><!-- /.container -->
+          <div class="contact-block contact-block--mod contact-block__shortcode" style="background-image: url(' . get_template_directory_uri() . '/pic/bg/bg-contact.png);">
+            <div class="container">
+              <div class="contact-block__modified">';
+
+  $html = $html . do_shortcode('[contact-form-7 id="396" title="Онлайн запись Баннер"]');
+  $html =  $html . '</div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="static-content">';
+
+  return $html;
+
+}
+
+add_shortcode( 'insert_reg_baner_form', 'insert_reg_baner_form' );
+//[insert_reg_baner_form]
 
 
 

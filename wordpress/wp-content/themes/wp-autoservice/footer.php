@@ -1,35 +1,47 @@
-
   <?php $map = true; ?>
   <?php $brands = true; ?>
 
-<?php if(is_category()) { ?>
-
-  <?php $cat__ID = get_queried_object()->cat_ID; ?>
-  <?php $field_term = 'category_' . $cat__ID; ?>
-  <?php $cat_type = get_field('category_type', $field_term); ?>
-
-
   <?php
- if (($cat_type['value'] === 'news')) {
+  if(is_category()) {
 
-    $map = false;
-    $brands = false;
+      $cat__ID = get_queried_object()->cat_ID;
+      $field_term = 'category_' . $cat__ID;
+      $cat_type = get_field('category_type', $field_term);
 
+      if (($cat_type['value'] === 'news') ) {
+
+          $map = false;
+          $brands = false;
+
+      }
+  }
+  if (is_singular('post')) {
+      $page_type = get_field('page_type');
+
+      if (!$page_type ) {
+
+            $map = false;
+            $brands = false;
+      }
   }
 
+  if (is_singular('page')) {
 
+      if (!is_page_template( 'page-prices.php' )) {
 
+            $brands = false;
+      }
   }
   ?>
 
-
     <?php if ( $map ) : ?>
     <div class="map">
-      <div class="map__holder" id="js-map" data-baloon="pic/location.png" data-content="адресок"></div>
+      <div class="map__holder" id="js-map" data-baloon="<?php the_field('map_baloone', 37);?>" data-content="<?php the_field('map_content',37);?>"></div>
       <div class="container">
         <div class="map__box">
           <div class="map__title container__subtitle">Как до нас добраться</div>
-          <img src="<?php echo get_template_directory_uri(); ?>/pic/photo-02.png" alt="Picture" class="map__image">
+          <?php $map_img = get_field('reg_img', 37);?>
+          <img src="<?php echo $map_img['sizes']['medium'];?>" class="map__image">
           <div class="map__button">
             <a href="#" class="btn" data-src="#popup-appointment" data-fancybox>Записаться он-лайн</a>
           </div>
@@ -38,7 +50,7 @@
     </div>
     <?php endif // end if have_rows ?>
 
-    <?php if ( !is_front_page() && !is_home() && $brands && have_rows('brands_slider', 37)) : ?>
+    <?php if ( !is_front_page() && !is_home() && $brands && have_rows('brands_slider', 37) ) : ?>
       <div class="brand-slider-holder">
         <div class="container">
           <div class="brand-slider-title container__subtitle">Ремонт автомобилей</div>
@@ -99,7 +111,7 @@
                   </svg>
                 </span>
                   <span class="loc-list__content">
-                  <a href="tel:<?php the_field('phone', 37); ?>" class="loc-list__content-inner loc-list__content-inner--link"><?php the_field('phone', 37); ?></a>
+                  <a href="tel:<?php echo preg_replace('/[^0-9]/', '', get_field('phone', 37)); ?>" class="loc-list__content-inner loc-list__content-inner--link"><?php the_field('phone', 37); ?></a>
                 </span>
                 </li>
                 <li class="loc-list__item">
@@ -117,8 +129,8 @@
             <div class="footer__box footer__box--right">
               <div class="footer__logo">
                 <a href="" class="logo logo--lg">
-                  <svg class="icon-logo logo__icon">
-                    <use xlink:href="#logo"></use>
+                  <svg class="icon-logo <?php the_field('logo', 37); ?>__icon">
+                    <use xlink:href="#<?php the_field('logo', 37); ?>"></use>
                   </svg>
                   <span class="logo__text"><?php bloginfo( 'name' ); ?></span>
                 </a>
@@ -140,63 +152,16 @@
       </div>
     </div>
   </footer>
+
+
   <!-- POPUP -->
   <!-- POPUP APPOINTMENT-->
   <div class="popup" id="popup-appointment">
     <div class="popup-holder">
       <div class="popup-appointment">
-        <div class="popup__title container__subtitle">Запишитесь на осмотр</div>
-        <div class="popup__info">Мы свяжемся с Вами в ближайше время!
-          <br>График работы без выходных и праздничных дней с 09:00 - 21:00</div>
-        <form action="#" class="popup__form">
-          <div class="input-hold input-row">
-            <input type="text" class="input input-hold__input" placeholder="Ваше имя">
-            <span class="input-hold__image">
-            <svg class="icon-user input-hold__icon">
-              <use xlink:href="#user"></use>
-            </svg>
-          </span>
-          </div>
-          <div class="input-hold input-row">
-            <input type="tel" class="input input-hold__input" placeholder="Ваш телефон">
-            <span class="input-hold__image">
-            <svg class="icon-phone input-hold__icon">
-              <use xlink:href="#phone"></use>
-            </svg>
-          </span>
-          </div>
-          <div class="input-hold input-row">
-            <textarea name="text" id="text" placeholder="Ваше сообщение"></textarea>
-            <span class="input-hold__image">
-            <svg class="icon-message input-hold__icon">
-              <use xlink:href="#message"></use>
-            </svg>
-          </span>
-          </div>
-          <div class="popup__submit">
-            <button type="submit" class="btn">Отправить заявку</button>
-          </div>
-          <ul class="checkboxes-list">
-            <li class="checkboxes-list__item checkboxes-list__item--mod">
-              <label class="checkbox">
-                <input type="checkbox" class="checkbox__check" checked="">
-                <span class="checkbox__icon"></span>
-                <span class="checkbox__inner">
-                <span class="checkbox__text">Нажимая "Отправить", я принимаю условия обработки персональных данных</span>
-                </span>
-              </label>
-            </li>
-            <li class="checkboxes-list__item checkboxes-list__item--mod">
-              <label class="checkbox">
-                <input type="checkbox" class="checkbox__check" checked="">
-                <span class="checkbox__icon"></span>
-                <span class="checkbox__inner">
-                <span class="checkbox__text">Я ознакомлен с <a href="#" class="btn-border">Политикой конфиденциальности</a></span>
-                </span>
-              </label>
-            </li>
-          </ul>
-        </form>
+        <?php echo do_shortcode('[contact-form-7 id="395" title="Онлайн запись PopUp"]'); ?>
+
+
       </div>
     </div>
   </div>
@@ -205,64 +170,13 @@
   <div class="popup" id="popup-pick">
     <div class="popup-holder">
       <div class="popup-appointment">
-        <div class="popup__title container__subtitle">Мы оперативно подберем</div>
-        <div class="popup__info">нужные запчасти для Вашего авто</div>
-        <form action="#" class="popup__form">
-          <div class="input-row">
-            <input type="text" class="input" placeholder="Ваше имя">
-          </div>
-          <div class="input-row">
-            <input type="tel" class="input" placeholder="Ваш телефон">
-          </div>
-          <div class="input-row">
-            <input type="text" class="input" placeholder="Марка автомобиля">
-          </div>
-          <div class="input-row">
-            <input type="text" class="input" placeholder="VIN">
-          </div>
-          <div class="input-row">
-            <input type="text" class="input" placeholder="Год выпуска">
-          </div>
-          <div class="input-row">
-            <input type="text" class="input" placeholder="VIN">
-          </div>
-          <div class="input-row">
-            <input type="text" class="input" placeholder="Объем">
-          </div>
-          <div class="input-row">
-            <input type="text" class="input" placeholder="Мощность и Л.С.">
-          </div>
-          <div class="input-row">
-            <textarea name="text" id="text" placeholder="Ваш вопрос"></textarea>
-          </div>
-          <div class="popup__submit">
-            <button type="submit" class="btn">Отправить заявку</button>
-          </div>
-          <ul class="checkboxes-list">
-            <li class="checkboxes-list__item checkboxes-list__item--mod">
-              <label class="checkbox">
-                <input type="checkbox" class="checkbox__check">
-                <span class="checkbox__icon"></span>
-                <span class="checkbox__inner">
-                <span class="checkbox__text">Нажимая "Отправить", я принимаю условия обработки персональных данных</span>
-                </span>
-              </label>
-            </li>
-            <li class="checkboxes-list__item checkboxes-list__item--mod">
-              <label class="checkbox">
-                <input type="checkbox" class="checkbox__check" checked="">
-                <span class="checkbox__icon"></span>
-                <span class="checkbox__inner">
-                <span class="checkbox__text">Я ознакомлен с <a href="#" class="btn-border">Политикой конфиденциальности</a></span>
-                </span>
-              </label>
-            </li>
-          </ul>
-        </form>
+        <?php echo do_shortcode('[contact-form-7 id="366" title="Подбор запчасти PopUP"]'); ?>
       </div>
     </div>
   </div>
   <!-- POPUP PICK END -->
+
+
   <!-- POPUP VIDEO-->
   <?php $videomap = get_field('videomap', 37); ?>
   <?php if ( !empty($videomap)) : ?>
@@ -278,8 +192,7 @@
   <!-- POPUP VIDEO END -->
   <!-- POPUP END -->
   <?php wp_footer(); ?>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/vendor.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+
 
 </body>
 

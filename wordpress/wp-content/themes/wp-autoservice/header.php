@@ -11,8 +11,7 @@
 
   <!-- @if NODE_ENV='production' -->
   <link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/pic/favicon.png" />
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/vendor.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
+
   <!-- @endif -->
   <!--[if lt IE 9]>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -36,15 +35,15 @@
 
 
               <?php if ( !is_front_page() && !is_home() ){ ?>
-                <a href="<?php echo home_url(); ?>" class="logo" title="<?php wp_title( '' ); ?>">
+                <a href="<?php echo home_url(); ?>" class="logo" title="<?php bloginfo( 'name' ); ?>">
               <?php } else { ?>
                 <span class="logo">
               <?php } ?>
 
-                <svg class="icon-logo logo__icon">
-                  <use xlink:href="#logo"></use>
+                <svg class="icon-logo <?php the_field('logo', 37); ?>__icon">
+                  <use xlink:href="#<?php the_field('logo', 37); ?>"></use>
                 </svg>
-                <span class="logo__text"><?php wp_title( '' ); ?></span>
+                <span class="logo__text"><?php bloginfo( 'name' ); ?></span>
               <?php if ( !is_front_page() && !is_home() ){ ?>
                 </a>
               <?php } else { ?>
@@ -84,7 +83,7 @@
                   </svg>
                 </span>
                 <span class="contact-item__content">
-              <a href="tel:<?php the_field('phone', 37); ?>" class="contact-item__link"><?php the_field('phone', 37); ?></a>
+              <a href="tel:<?php echo preg_replace('/[^0-9]/', '', get_field('phone', 37)); ?>" class="contact-item__link"><?php the_field('phone', 37); ?></a>
             </span>
               </div>
             </div>

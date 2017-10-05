@@ -30,7 +30,7 @@
                     <ul class="contact-block-list">
                       <?php while ( have_rows('contacts_adress') ) : the_row(); ?>
                         <li class="contact-block-list__item">
-                          <a href="tel:<?php the_sub_field('tel'); ?>" class="contact-block-list__inner contact-block-list__inner--link"><?php the_sub_field('tel'); ?></a>
+                          <a href="tel:<?php echo preg_replace('/[^0-9]/', '', get_sub_field('tel')); ?>" class="contact-block-list__inner contact-block-list__inner--link"><?php the_sub_field('tel'); ?></a>
                         </li>
                       <?php  endwhile; ?>
                     </ul>
@@ -48,7 +48,9 @@
             <?php endif; ?>
 
             <div class="contact-block__cell contact-block__cell--right">
-              <?php echo do_shortcode('[contact-form-7 id="36" title="Контактная форма Контакты"]'); ?>
+              <div class="contact-block__inner">
+                <?php echo do_shortcode('[contact-form-7 id="394" title="Онлайн запись Контакты"]'); ?>
+              </div>
             </div>
           </div>
         </div>

@@ -81,7 +81,7 @@ class walker_head_menu extends Walker_Nav_Menu {
             'active_page_class'     => in_array("current-menu-item",$item->classes) ? ($depth == 0 ? $prefix . $suffix['active_item'] : $prefix . $suffix['active_sub_item']) : '',
             'active_parent_class'   => in_array("current-menu-parent",$item->classes) ? $prefix . $suffix['parent_of_active_item'] : '',
             'active_ancestor_class' => in_array("current-menu-ancestor",$item->classes) ? $prefix . $suffix['ancestor_of_active_item'] : '',
-            'user_class'            => $item->classes[0] !== '' ? $prefix . '__item--'. $item->classes[0] : ''
+            'user_class'            => $item->classes[0] !== '' ? $prefix . $item->classes[0] : ''
         );
         // convert array to string excluding any empty values
         $class_string = implode("  ", array_filter($item_classes));
@@ -234,7 +234,7 @@ class walker_footer_menu extends Walker_Nav_Menu {
             'active_page_class'     => in_array("current-menu-item",$item->classes) ? ($depth == 0 ? $prefix . $suffix['active_item'] : $prefix . $suffix['active_sub_item']) : '',
             'active_parent_class'   => in_array("current-menu-parent",$item->classes) ? $prefix . $suffix['parent_of_active_item'] : '',
             'active_ancestor_class' => in_array("current-menu-ancestor",$item->classes) ? $prefix . $suffix['ancestor_of_active_item'] : '',
-            'user_class'            => $item->classes[0] !== '' ? $prefix . '__item--'. $item->classes[0] : ''
+            'user_class'            => $item->classes[0] !== '' ? $prefix . 'simple__item--'. $item->classes[0] : ''
         );
         // convert array to string excluding any empty values
         $class_string = implode("  ", array_filter($item_classes));

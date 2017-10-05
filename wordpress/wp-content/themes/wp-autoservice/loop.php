@@ -7,7 +7,7 @@
                           style="background-image: url('<?php echo the_post_thumbnail_url('medium'); ?>');"
                         <?php } else { ?>
                           style="background-image: url('<?php echo catchFirstImage(); ?>');"
-                        <?php } ?> >></div>
+                        <?php } ?> ></div>
       <div class="service__title js-equal-height">
         <span class="service__title-inner"><?php the_title(); ?></span>
       </div>
